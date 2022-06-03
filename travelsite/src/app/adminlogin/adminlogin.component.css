@@ -14,3 +14,7 @@ div.card-header.text-center{
  h1.text-light{
      font-size:26px;
  }
+ .button.text-center{
+    margin-left: 3%;
+    margin-top: 18px;
+}

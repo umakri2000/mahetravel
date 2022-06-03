@@ -16,8 +16,11 @@
     </div>
 
     <div class="button">
-      <button (click)="showoff()">click to check status</button>
+      <button class="btn btn-primary" *ngIf="formshow" (click)="showoff()">click to check status</button>
     </div>
+    <div>
+    <button class="btn btn-primary"*ngIf="show"(click)="showoff()">BACK TO BOOKING FORM</button>
+  </div>
 
     <div class="container mt-5" *ngIf="formshow">
       <div class="card mx-auto">
@@ -173,6 +176,7 @@
     <div class="input-group" *ngIf="show">
       <div class="form-outline">
         <input
+        id="search"
           type="search"
           [(ngModel)]="search"
           class="form-control mt-5 search"

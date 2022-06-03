@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit {
  
   ngOnInit(): void {
     this.formshow=true;
-    //  this.viewpackage()
+     this.viewpackage()
       this.futuredate();
     this.bookup = this.formbuilder.group(
       {
@@ -92,7 +92,20 @@ export class RegisterComponent implements OnInit {
          }, 1000);
     })
 
-}
+}viewpackage(){
+      this.api.packageoffer().subscribe(data=>{
+        console.log(data);
+        this.packagedata=data;
+        this.packagedata=this.packagedata.data.docs;
+        console.log(this.packagedata);
+        for(const i of this.packagedata){
+              console.log(i);
+              this.place.push(i);
+        }
+      
+      })
+    } 
+
     // to block the past date in the calculator
     futuredate(){
       var date = new Date();

@@ -13,3 +13,8 @@ width:50%;
     width: 19rem;
     height: 400px;
 }
+.btn.btn-success
+{
+    margin-top:20%;
+    margin-left:30%;
+}

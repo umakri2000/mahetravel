@@ -10,7 +10,7 @@
     background-color: rgb(198, 155, 238);
 }
  button{
-    margin-top:22px;
+ 
 
 }
 input{
@@ -33,3 +33,11 @@ td{
 }
 div.container.mt-5{
   width: 55%;}
+.btn.btn-primary{
+    margin-left:500px;
+    margin-top:22px;
+}
+#search{
+    width:100vw;
+    display:block;
+}
