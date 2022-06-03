@@ -1,0 +1,110 @@
+
+.home_gif img{
+    width:100vw;
+    height: 100vh;
+    margin-top: -17px;
+    /* background-size: cover; */
+    position: relative;
+
+}
+#button1,#button4{
+    margin-top:30px;
+}
+#button2,#button3{
+    margin-top: 18px;
+}
+#buttonhotel{
+    width:70%;
+    position: relative;
+    left:30px;
+}
+.h4heading{
+    color:red;
+    margin-top:30%;
+    font-size: large;
+}
+.home-highlight{
+    margin-bottom:0px;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    padding: 10px;
+     grid-gap:25px;
+height: 64vh; 
+
+ box-sizing: border-box; 
+
+}
+
+.msg{
+    background-color:red;
+    color:white;
+}
+.card-title{
+    background-color: rgb(231, 31, 97);
+    color:whitel
+}
+.card-text p{
+    background-color: brown;
+    color:white;
+}
+.grid-image img{
+    position:relative;
+    width:383px;
+    height:250px;
+}
+
+.grid-image h4{
+    position: absolute;
+    top:1160px;
+    padding:150px;
+    color:white;
+    
+}
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    width:50%;
+    height: 335px;
+    width:16rem
+  }
+  .section-5 h6,p{
+      margin-top:15px;
+  }
+  .heading{
+      text-align: center;
+      margin-top:5px;
+  }
+ .img{
+      width:102%;
+  }
+  .card-body h5{
+      font-size: -0.75rem;
+  }
+
+  
+
+
+
+

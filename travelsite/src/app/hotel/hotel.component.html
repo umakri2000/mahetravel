@@ -1,0 +1,125 @@
+
+
+<div class="container mt-5" *ngIf="value">
+    <div class="card  mx-auto">
+        <div class="card-header text-center">
+            <h1 class="text-dark"style="  font-size:250%;">BOOK-HOTEL</h1>
+        </div>
+        <div class="card-body">
+            
+            <form [formGroup]="resortbook">
+                <div class="form-group">
+                    <label for="first_Name" class="text-dark">Name :</label>
+                    <input type="text" formControlName="name" class="form-control" placeholder="Enter the Name" >
+                    <span class="text-danger"
+                        *ngIf="resortbook.controls['name'].touched && resortbook.hasError('required','name')">*Name
+                         is required </span>
+            </div>
+                
+                <div class="form-group">
+                    <label for="mobileNumber" class="text-dark">MobileNumber:</label>
+                    <input type="text" formControlName="mobileNumber" class="form-control" placeholder="Enter mobile number"  pattern="^[+0]{0,2}(91)?[0-9]{10}$"minlength="10" maxlength="10">
+                    <span class="text-danger"
+                        *ngIf="resortbook.controls['mobileNumber'].touched && resortbook.hasError('required','mobileNumber')">*mobile
+                        Number is required </span>
+                        <span class="text-danger" *ngIf="resortbook.hasError('pattern','mobileNumber')">*Contact number should not
+                            contains chars!! </span>
+                </div>
+                 <div class="form-group">
+                    <label for="DATE" class="text-dark">DATE</label>
+                    <input type="date" formControlName="date" class="form-control" placeholder="Enter  the date" min="{{maxdate}}">
+                    <span class="text-danger"
+                        *ngIf="resortbook.controls['date'].touched && resortbook.hasError('required','date')">*date
+                     is required </span>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="text-dark">Email :</label>
+                    <input type="email" formControlName="email" class="form-control" placeholder="Enter Your Email ">
+                    <span class="text-danger"
+                        *ngIf="resortbook.controls['email'].touched && resortbook.hasError('required','email')">*Email is
+                        required </span>
+                </div>
+              
+                <div class="form-group">
+                    <label for="hotel" class="text-dark" >HOTEL :</label>
+                    <br>
+                        <select name="hotel" formControlName="hotel"
+                        placeholder="enter the hotel" id="inputplace">
+                            <option value="OOTY-Grand-palace">OOTY-Grand-palace</option>
+                            <option value="DELHI-MAHE resort">DELHI-MAHE resort</option>
+                            <option value="DARJEELING-HILL-RESORT">DARJEELING-HILL-RESORT</option>
+                            <option value="MALDIVES-BEACH resort">MALDIVES-BEACH resort</option>
+                          </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="room" class="text-dark" >TYPE OF ROOM :</label>
+                                <br>
+                                    <select name="Room" formControlName="Room"  id="inputplace">
+                                    placeholder="enter the hotel" id="inputplace">
+                                        <option value="SingleBed" selected>SingleBed</option>
+                                        <option value="Rooms_with_balcony">BalconyRooms</option>
+                                        <option value="DoubleBeD">DoubleBed</option>
+                                      </select>
+                                
+                            </div>
+                <div class="form-group">
+                    <label for="file" class="text-dark">IDENTITY file :</label>
+                    <input type="file" formControlName="file" class="form-control"
+                        placeholder="Put a file">
+                    <span class="text-danger"
+                        *ngIf="resortbook.controls['file'].dirty && resortbook.hasError('required','file')">*id proof
+                        is
+                        required </span>
+                </div>
+                <div class="form-group">
+                    <label for="food" class="text-dark" >ACCOMANDATION OF FOOD :</label>
+                    <br>
+                        <select name="food" formControlName="food" id="inputplace" >
+                        placeholder="enter the hotel" id="inputplace">
+                            <option value="yes">YES</option>
+                            <option value="no">NO</option>
+                          </select>
+                    
+                </div>
+                <div class="button text-center">
+                    <button type="submit" class="btn btn-outline-dark px-4 py-2"[disabled]="!resortbook.valid" (click)="bookHotel(this.resortbook.value)">BOOK</button>
+
+
+                </div>
+            </form>
+           
+        </div>
+    </div>
+    </div>
+    <div class="input-group">
+        <div class="form-outline">
+            <input type="search" [(ngModel)]="search" class="form-control mt-5 search" placeholder="Enter Your Data" />
+            <button type="submit" class="btn btn-primary" (click)="hotellist()">VIEWpackage</button> 
+        </div>
+        <table class="table bg-light">
+            <thead class="text-dark">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <!-- <th scope="col">place</th> -->
+                    <th scope="col">HOTEL</th>
+                    <th scope="col">food</th>
+    
+                    
+                    <th scope="col">Date</th>
+                    <th scope="col">STATUS</th>
+    
+                </tr>
+            </thead>
+            <tbody class="text-dark">
+                <tr *ngFor="let obj of object |filter:search">
+                    <td scope="row">{{obj.name}}</td>
+                    <td scope="row">{{obj.email}}</td>
+                    <td scope="row">{{obj.hotel}}</td>
+                    <td scope="row">{{obj.food}}</td>
+                    <td scope="row">{{obj.date}}</td>
+                <td scope="row">booked</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>

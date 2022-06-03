@@ -1,0 +1,16 @@
+.container.mt-5{
+    width:40%;
+}
+.text-dar{
+    background-color: rebeccapurple;
+}
+div.card-header.text-center{
+    background-color:rebeccapurple ;
+ }
+ label{
+     color:black;
+
+ }
+ h1.text-light{
+     font-size:26px;
+ }

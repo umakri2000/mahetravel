@@ -1,0 +1,37 @@
+
+<div class="card-body">
+    <h4> PACKAGE REGISTER</h4>
+ <div class="addpackage">
+     <form [formGroup]="admin" (ngSubmit)="package(this.admin.value)">
+             <label for="place" class="text-dark">PLACE :</label>
+             <input type="text" formControlName="place" class="form-control" placeholder="Enter First Name" maxlength="10">
+             <span class="text-danger"
+                 *ngIf="admin.controls['place'].touched && admin.hasError('required','place')">*place
+                  is required </span>
+         
+        
+          <div class="form-group">
+             <label for="PACKAGE" class="text-dark">package</label>
+             <input type="text" formControlName="package" class="form-control" placeholder="Enter  the package" maxlength="20">
+             <span class="text-danger"
+                 *ngIf="admin.controls['package'].touched && admin.hasError('required','package')">*package
+                 Name is required </span>
+         </div>
+         <div class="form-group">
+             <label for="email" class="text-dark">PRICE</label>
+             <input type="number" formControlName="price" class="form-control" placeholder="Enter Your rate " min="1">
+             <span class="text-danger"
+                 *ngIf="admin.controls['price'].touched && admin.hasError('required','price')">*price is
+                 required </span>
+                 </div>
+                 <div class="button">
+                     <button type="submit" class="btn btn-outline-dark px-4 py-2" [disabled]="!admin.valid">Register</button>
+ 
+                 </div>
+                 </form>
+     <button type="submit" class="btn btn-primary" (click)="goToPage5('viewpassanger')">Viewpassanger</button>
+     <button type="submit" id="hotelcheck" class="btn-btn-primary"(click)="goToPage6('viewhotel')">View hotel-booking</button>
+ 
+                 </div>
+ 
+                

@@ -1,0 +1,15 @@
+.container mt-5{
+    position:relative;
+    left:400px;
+    width:100vw;
+    background-color: rgb(198, 155, 238);
+}
+#inputplace{
+    width:35vw;
+    height:30px;
+    border-color: aqua;
+}
+div.container.mt-5{
+    width:40%;
+
+}

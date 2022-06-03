@@ -1,0 +1,28 @@
+<div class="head-content">
+    <span class="form-outline">
+        <input type="search" [(ngModel)]="search" class="form-control mt-5 search" placeholder="Enter Your Data" /></span>
+    </div>
+    <span><i class="fa fa-search" aria-hidden="true"(click)="viewpackage()" style=" margin-left: 205px;"></i></span>
+
+<div class="input-group">
+<table class="table dark">
+    <thead class="text-dark">
+        <tr>
+            <th scope="col">PLACE</th>
+            <th scope="col">PRICE</th>
+            <th scope="col">PACKAGE</th>
+            <th scope="col">BOOK-Now</th>
+            
+
+
+        </tr>
+    </thead>
+    <tbody class="text-light">
+        <tr *ngFor="let obj of object|filter:search">
+            <td scope="row">{{obj.place}}</td>
+            <td scope="row">{{obj.price}}</td>
+            <td scope="row">{{obj.package}}</td>
+        <button type="submit" class="btn btn-primary"(click)="goToPage7('register')">BOOK</button>
+        </tr>
+    </tbody>
+</table>

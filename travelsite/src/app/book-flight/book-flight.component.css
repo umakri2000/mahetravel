@@ -1,0 +1,23 @@
+#inputplace{
+    width:99%;
+}
+div.card.mx-auto{
+    width:50%;
+}
+th {
+    text-decoration: none;
+}
+div.button.text-center{
+padding:8px;
+}
+/* button.btn.btn-primary{
+    padding:10px;
+} */
+th{
+    color: dodgerblue;
+    background-color:rgb(67, 215, 215);
+    margin-bottom:45%;
+}
+div.card-header.text-center{
+    background-color: aquamarine;
+}

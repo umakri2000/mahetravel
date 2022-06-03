@@ -1,0 +1,18 @@
+td{
+    color:black;
+}
+.form-outline input{
+    width:200%;
+}
+.form-outline button{
+    margin-top: 20px;
+}
+td{
+    padding:5px,12px;
+}
+form{
+    width:50%;
+}
+.head-content{
+    display: inline-block;
+}

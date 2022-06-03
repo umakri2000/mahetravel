@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "project",
+  "main": "form.js",
+  "scripts": {
+    "test": "no test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umakri2000/mahetravel.git"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "umakrishnan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umakri2000/mahetravel/issues"
+  },
+  "homepage": "https://github.com/umakri2000/mahetravel#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "nano": "^10.0.0"
+  }
+}

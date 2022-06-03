@@ -1,0 +1,35 @@
+<div class="input-group">
+    <div class="form-outline">
+        <input type="search" [(ngModel)]="search" class="form-control mt-5 search" placeholder="Enter Your Data" />
+        <button type="submit" class="btn btn-primary" (click)="hotellist()">VIEWpackage</button> 
+    </div>
+    </div>
+    <table class="table bg-light ">
+        <thead class="text-dark">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">HOTEL</th>
+                <th scope="col">food</th>
+                <th scope="col">Date</th>
+                <th scope="col">STATUS</th>
+
+            </tr>
+        </thead>
+        <tbody class="text-dark">
+            <tr *ngFor="let obj of object| filter:search">
+                <td scope="row">{{obj.name}}</td>
+                <td scope="row">{{obj.email}}</td>
+                <td scope="row">{{obj.hotel}}</td>
+                <td scope="row">{{obj.food}}</td>
+                <td scope="row">{{obj.date}}</td>
+                <td scope="row">booked</td>
+                    <td scope="row"><button type="button" class="btn btn-outline-dark" (click)="deletehotel(obj,obj)">REJECT</button>
+
+                        </td>
+                
+
+            </tr>
+        </tbody>
+    </table>
+    

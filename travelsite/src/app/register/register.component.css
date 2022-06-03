@@ -1,0 +1,35 @@
+#inputplace{
+    width:38vw;
+    height:30px;
+    border-color: aqua;
+}
+.container mt-5{
+    position:relative;
+    left:400px;
+    width:100vw;
+    background-color: rgb(198, 155, 238);
+}
+ button{
+    margin-top:22px;
+
+}
+input{
+    font-size: italic;
+}
+.travel-booking{
+    width:43%;
+    margin-top:30px;
+    position:relative;
+    left:200px;
+    
+}
+img{
+    width:300px;
+    float:right;
+}
+td{
+    color:black;
+    background-color: lightpink;
+}
+div.container.mt-5{
+  width: 55%;}

@@ -1,0 +1,15 @@
+.grid-container{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    padding: 10px;
+     grid-gap:25px;
+height: 64vh;
+width:50%; 
+
+ box-sizing: border-box; 
+
+}
+.card{
+    width: 19rem;
+    height: 400px;
+}
