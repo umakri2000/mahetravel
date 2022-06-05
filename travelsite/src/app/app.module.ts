@@ -23,6 +23,9 @@ import { FlightsComponent } from './flights/flights.component';
 import { BookFlightComponent } from './book-flight/book-flight.component';
 import { FooterComponent } from './footer/footer.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
+import { InfoComponent } from './info/info.component';
+import { TicketComponent } from './ticket/ticket.component';
+import { StatusComponent } from './status/status.component';
 
 
 @NgModule({
@@ -45,7 +48,10 @@ import { AdmindashboardComponent } from './admindashboard/admindashboard.compone
     FlightsComponent,
     BookFlightComponent,
     FooterComponent,
-    AdmindashboardComponent
+    AdmindashboardComponent,
+    InfoComponent,
+    TicketComponent,
+    StatusComponent
   ],
   imports: [
     BrowserModule,FormsModule,

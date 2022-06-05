@@ -12,3 +12,25 @@ body{
     font-family: 'Asap', sans-serif;
 font-family: 'Barlow Semi Condensed', sans-serif;
 } 
+p,label,.text-danger{
+    font-size:14px;
+}
+h3{
+    font-size:21px;
+}
+.btn.btn-success
+{
+    font-size:15px;
+}
+.button.text-center{
+    font-size:14px;
+}
+.form-control{
+    font-size:14px;
+}
+h6{
+    font-size:23px;
+}
+th,td{
+    font-size:23px
+}

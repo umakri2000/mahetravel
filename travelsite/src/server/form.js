@@ -2,6 +2,7 @@ const connection = require("express");
 const bodyparser = require("body-parser");
 const app = connection();
 const port = 8000;
+const setmail = require('./sendmail');
 const cors = require("cors");
 const dbconnection = require("./db");
 app.use(bodyparser.json());
@@ -262,6 +263,22 @@ dbconnection.get(data,"projecttravel").then((res) => {
   }
 });
 });
+app.post('/email',(request,response,next)=>{
+  console.log('mmm');
+ 
+  var object ={
+    first_name: request.body.first_name,
+    mobileNumber:request.body.mobileNumber,
+    email: request.body.email,
+    date:request.body.date,
+    place:request.body.place,
+    aadhar:request.body.aadhar,
+    // file:request.body.file,
+    type:'user'
+  }
+  setmail.getemail(request.body.email);
+  console.log(object);
+})
   app.delete("/delete/:id/:id1", (request, response) => {
     dbconnection.del_id(request.params.id,request.params.id1, "projecttravel").then((res)=>{
       if (res) {

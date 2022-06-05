@@ -11,9 +11,11 @@ export class NavComponent implements OnInit {
   show:boolean=false;
   loginshow:boolean=true;
   constructor(public api :ApiserviceService,private router:Router) { }
-
+name:any
   ngOnInit(): void {
-   
+    let local:any=localStorage.getItem("formvalue");
+    let parsed=JSON.parse(local);
+    this.name=parsed.email;
    
   }
 
@@ -22,7 +24,8 @@ logout(){
   this.api.loginshow=false;
   this.api.show=true;
   this.router.navigate(['/login']);
+  // localStorage.removeItem();
+  console.log(this.name);
 }
-
 
 }

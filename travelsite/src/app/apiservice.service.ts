@@ -6,6 +6,8 @@ import { HttpClient } from '@angular/common/http';
 export class ApiserviceService {
   loginshow:boolean=false;
   show:boolean=true;
+loginform:any;
+
   constructor(private http:HttpClient) { 
 
   }
@@ -39,9 +41,12 @@ export class ApiserviceService {
   }
   deletehotel(id:any,id1:any){
     return this.http.delete(`http://localhost:8000/deletehotel/${id}/${id1}`)
-
-
   }
+  // localfunction(formvalue:any){
+  //   console.log('local storage demo works');
+  //   localStorage.setItem("formvalue",JSON.stringify(this.loginform.value))
+   
+  // }
   viewFlights(){
     return this.http.get('http://localhost:8000/flightDetails')
      }
@@ -51,4 +56,9 @@ export class ApiserviceService {
   deletepassanger(id:any,id1:any){
     return this.http.delete(`http://localhost:8000/delete/${id}/${id1}`);
   }
+  sendmail(formobject:any){
+    console.log("Hello");
+    return this.http.post('http://localhost:8000/email/',formobject)
+  
+    }
 }

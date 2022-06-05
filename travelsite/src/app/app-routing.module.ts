@@ -1,4 +1,4 @@
-
+import { InfoComponent } from './info/info.component';
 import {  NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
@@ -17,15 +17,18 @@ import { HotelComponent } from './hotel/hotel.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { ViewpassangerComponent } from './viewpassanger/viewpassanger.component';
 import { PackagesComponent } from './packages/packages.component';
+import { StatusComponent } from './status/status.component';
 const routes: Routes = [
 {path:'register',component:RegisterComponent},
 {path:'login',component:LoginComponent},
+{path:'info',component:InfoComponent},
 {path:'hotel',component:HotelComponent},
 {path:'packages',component:PackagesComponent},
 {path:'admindashboard',component:AdmindashboardComponent},
 {path:'adminlogin',component:AdminloginComponent},
 {path:'tourgoa',component:TourgoaComponent},
 {path:'maldives',component:MaldivesComponent},
+{path:'info/status',component:StatusComponent},
 {path:'tourmunnar',component:TourmunnarComponent},
 {path:'tourdarjeeling',component:TourdarjeelingComponent},
 {path:'admin',component:AdminComponent},

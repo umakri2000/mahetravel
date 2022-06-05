@@ -16,3 +16,7 @@ form{
 .head-content{
     display: inline-block;
 }
+.fa.fa-search{
+    margin-left: 130px;
+    font-size: 21px;
+}

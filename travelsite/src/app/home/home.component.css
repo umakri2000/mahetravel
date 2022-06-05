@@ -2,7 +2,7 @@
 .home_gif img{
     width:100vw;
     height: 100vh;
-    margin-top: -17px;
+    margin-top: -10px;
     /* background-size: cover; */
     position: relative;
 
@@ -85,9 +85,8 @@ height: 64vh;
     padding: 16px;
     text-align: center;
     background-color: #f1f1f1;
-    width:50%;
+    width:80%;
     height: 335px;
-    width:16rem
   }
   .section-5 h6,p{
       margin-top:15px;
@@ -102,6 +101,15 @@ height: 64vh;
   .card-body h5{
       font-size: -0.75rem;
   }
+  .hotelimg{
+    height:170px;
+    width:100%
+  }
+  h2{
+    color:red;
+    font-size:34px;
+  }
+
 
   
 

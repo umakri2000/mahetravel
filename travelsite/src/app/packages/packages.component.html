@@ -2,7 +2,7 @@
     <span class="form-outline">
         <input type="search" [(ngModel)]="search" class="form-control mt-5 search" placeholder="Enter Your Data" /></span>
     </div>
-    <span><i class="fa fa-search" aria-hidden="true"(click)="viewpackage()" style=" margin-left: 205px;"></i></span>
+    <span><em class="fa fa-search" aria-hidden="true"(click)="viewpackage()"></em></span>
 
 <div class="input-group">
 <table class="table dark">
@@ -22,7 +22,7 @@
             <td scope="row">{{obj.place}}</td>
             <td scope="row">{{obj.price}}</td>
             <td scope="row">{{obj.package}}</td>
-        <button type="submit" class="btn btn-primary"(click)="goToPage7('register')">BOOK</button>
+        <td><button type="submit" class="btn btn-primary"(click)="goToPage7('register')">BOOK</button></td>
         </tr>
     </tbody>
 </table>

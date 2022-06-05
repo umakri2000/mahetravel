@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   constructor(private router:Router) { }
-
+  name:any;
   ngOnInit(): void {
   }
   // functio to navigate to another pages
@@ -27,5 +27,6 @@ goToPageHotel(place:string){
   this.router.navigate([`${place}`])
 }
 }
+
 
 

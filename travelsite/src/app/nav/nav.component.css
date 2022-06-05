@@ -26,4 +26,7 @@ li img{
 .active{
     color:darkred;
 }
+.fa.fa-info-circle{
+     font-size:23px;
+}
 

@@ -49,17 +49,19 @@ export class RegisterComponent implements OnInit {
     
       this.api.bookData(Formvalue).subscribe((data: any)=>{
         console.log(data);
+      localStorage.setItem("formvalue",JSON.stringify(this.bookup.value))
+
 
         alert('Your Ticket was booked!!!!!!!!!')
+        this.sendmail(Formvalue);
 
       })
   }
   // to display the status of the passangers
-  displayDetails(formvalue:any) {
+  displayDetails(_formvalue:any) {
     this.api.displayDetails().subscribe(data=>{  
       console.log(data)
-      console.log(data)             
-
+      console.log(data)            
       this.traveldata=data;
       this.traveldata=this.traveldata.data.docs;
       console.log(this.traveldata);
@@ -127,6 +129,13 @@ export class RegisterComponent implements OnInit {
       console.log(this.formshow);
       this.show=!this.show;
     }
+    sendmail(Formvalue:any){
+      console.log("Hello");
+      console.log(Formvalue);
+      this.api.sendmail(Formvalue).subscribe((_data)=>{
+        console.log(Formvalue);
+      })
+      }
     
     }  
 
