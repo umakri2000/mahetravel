@@ -59,9 +59,5 @@ loginform:any;
   deletepassanger(id:any,id1:any){
     return this.http.delete(`http://localhost:8000/delete/${id}/${id1}`);
   }
-  sendmail(formobject:any){
-    console.log("Hello");
-    return this.http.post('http://localhost:8000/email/',formobject)
   
-    }
 }
