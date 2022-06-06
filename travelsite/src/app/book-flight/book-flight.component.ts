@@ -36,7 +36,7 @@ export class BookFlightComponent implements OnInit {
 
   }
   // view the passanger data
-  viewFlightstatus(Formvalue:any) {
+  viewFlightstatus(_Formvalue:any) {
     this.api.viewFlights().subscribe(data=>{
       console.log(data);
       console.log('Data was fetching');
