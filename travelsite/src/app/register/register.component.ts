@@ -52,7 +52,6 @@ export class RegisterComponent implements OnInit {
 
 
         alert('Your Ticket was booked!!!!!!!!!')
-        this.sendmail(Formvalue);
 
       })
   }
@@ -127,13 +126,7 @@ export class RegisterComponent implements OnInit {
       this.formShow=!this.formShow;
       this.show=!this.show;
     }
-    sendmail(Formvalue:any){
-      console.log("Hello");
-      console.log(Formvalue);
-      this.api.sendmail(Formvalue).subscribe((_data)=>{
-        console.log(Formvalue);
-      })
-      }
+
     
     }  
 

@@ -2,7 +2,6 @@ const connection = require("express");
 const bodyparser = require("body-parser");
 const app = connection();
 const port = 8000;
-const setmail = require('./sendmail');
 const cors = require("cors");
 const dbconnection = require("./db");
 app.use(bodyparser.json());
