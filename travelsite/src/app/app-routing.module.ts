@@ -1,5 +1,6 @@
 import { InfoComponent } from './info/info.component';
 import {  NgModule } from '@angular/core';
+import { TicketComponent } from './ticket/ticket.component';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { LoginComponent } from './login/login.component';
@@ -29,6 +30,7 @@ const routes: Routes = [
 {path:'tourgoa',component:TourgoaComponent},
 {path:'maldives',component:MaldivesComponent},
 {path:'info/status',component:StatusComponent},
+{path:'admin/ticket',component:TicketComponent},
 {path:'tourmunnar',component:TourmunnarComponent},
 {path:'tourdarjeeling',component:TourdarjeelingComponent},
 {path:'admin',component:AdminComponent},

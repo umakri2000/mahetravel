@@ -24,7 +24,6 @@ logout(){
   this.api.loginshow=false;
   this.api.show=true;
   this.router.navigate(['/login']);
-  // localStorage.removeItem();
   console.log(this.name);
 }
 

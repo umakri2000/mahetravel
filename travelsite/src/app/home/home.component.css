@@ -21,7 +21,8 @@
 .h4heading{
     color:red;
     margin-top:30%;
-    font-size: large;
+    font-size: 34px;
+
 }
 .home-highlight{
     margin-bottom:0px;
@@ -109,6 +110,11 @@ height: 64vh;
     color:red;
     font-size:34px;
   }
+ 
+h6{
+    color:red;
+    font-size: 34px;
+}
 
 
   

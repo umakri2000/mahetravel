@@ -30,7 +30,7 @@ search!:string;
   }
   // to reject the request of the traeller
   deletehotel(data:any,data1:any){
-    this.api.deletehotel(data._id,data1._rev).subscribe(res=>{
+    this.api.deletehotel(data._id,data1._rev).subscribe(_res=>{
       location.reload();
     },rej=>{
       console.log('Error',rej);   

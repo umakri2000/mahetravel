@@ -80,7 +80,7 @@ app.post("/travel", (request, response) => {
            type:'hotel'
         };
         
-          dbconnection.post_travel(object,'projecttravel').then((res)=>{
+          dbconnection.post_travel(object,'projecttravel').then(_res => {
             const teststatus={
               status:201,
               message: "TRAVELLER was registered Successfully into the database",
@@ -91,7 +91,7 @@ app.post("/travel", (request, response) => {
               message:'OOPS',
               data:res,
             }
-            if (res) {
+            if (_res) {
               response.send(teststatus);
             } else {
               response.send(err);
@@ -101,9 +101,7 @@ app.post("/travel", (request, response) => {
           })
         console.log("the traveller data added");
        // to display the hotel status  
-  app.get("/hotelstatus", (request, response) => {
-    console.log(request);
-    console.log("begin to write ddata");
+  app.get("/hotelstatus", (_request, response) => {
     const data = {
       selector:{
         type:'hotel'
@@ -163,18 +161,18 @@ app.post('/addpackage', (request, response) =>{
      type:'package'
  }
  
-dbconnection.post_travel(object,'projecttravel').then((res)=>{
+dbconnection.post_travel(object,'projecttravel').then(_res=>{
   const teststatus={
     status:201,
     message: "TRAVELLER was registered Successfully into the database",
-    data: res,
+    data: _res,
   }
   const err ={
     status:404,
     message:'OOPS',
     data:res,
   }
-  if (res) {
+  if (_res) {
     response.send(teststatus);
   } else {
     response.send(err);
@@ -192,7 +190,7 @@ dbconnection.post_travel(object,'projecttravel').then((res)=>{
         type:'adminloign'
       }
     }
-    dbconnection.get(data,"projecttravel").then((res) => {
+    dbconnection.get(data,"projecttravel").then((_res) => {
       const teststatus={
         status:200,
         message: "TRAVELLER was registered Successfully into the database",
@@ -203,7 +201,7 @@ dbconnection.post_travel(object,'projecttravel').then((res)=>{
         message:'OOPS',
         data:res,
       }
-      if (res) {
+      if (_res) {
         response.send(teststatus);
       } else {
         response.send(err);
@@ -226,18 +224,18 @@ dbconnection.post_travel(object,'projecttravel').then((res)=>{
     };
     
     // dbconnection.post_travel(object,'projecttravel').then((res)=>{
-      dbconnection.post_travel(object,'projecttravel').then((res)=>{
+      dbconnection.post_travel(object,'projecttravel').then((_res)=>{
         const teststatus={
           status:201,
           message: "TRAVELLER was registered Successfully into the database",
-          data: res,
+          data: _res,
         }
         const err ={
           status:404,
           message:'OOPS',
-          data:res,
+          data:_res,
         }
-        if (res) {
+        if (_res) {
           response.send(teststatus);
         } else {
           response.send(err);
@@ -263,9 +261,7 @@ dbconnection.get(data,"projecttravel").then((res) => {
   }
 });
 });
-app.post('/email',(request,response,next)=>{
-  console.log('mmm');
- 
+app.post('/email',(request,_response)=>{
   var object ={
     first_name: request.body.first_name,
     mobileNumber:request.body.mobileNumber,
@@ -277,23 +273,23 @@ app.post('/email',(request,response,next)=>{
     type:'user'
   }
   setmail.getemail(request.body.email);
-  console.log(object);
+  console.log(object)
 })
   app.delete("/delete/:id/:id1", (request, response) => {
-    dbconnection.del_id(request.params.id,request.params.id1, "projecttravel").then((res)=>{
-      if (res) {
-        response.send(res);
+    dbconnection.del_id(request.params.id,request.params.id1, "projecttravel").then((_res)=>{
+      if (_res) {
+        response.send(_res);
       } else {
         response.send("error");
       }
     });
   });
-  app.delete("/deletehotel/:id/:id1", (request, response) => {
-    dbconnection.del_id(request.params.id,request.params.id1, "projecttravel").then((res) => {
-      if (res) {
-        response.send(res);
+  app.delete("/deletehotel/:id/:id1", (_request,_response) => {
+    dbconnection.del_id(_request.params.id,_request.params.id1, "projecttravel").then((_res)=>{
+      if (_res) {
+        _response.send(_res);
       } else {
-        response.send("error");
+        _response.send("error");
       }
     });
   });

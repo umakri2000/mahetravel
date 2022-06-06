@@ -1,10 +1,10 @@
 
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { FormBuilder,Validators,FormControl } from '@angular/forms';
+import { FormGroup,FormBuilder,Validators } from '@angular/forms';
+
 import { ApiserviceService } from '../apiservice.service';
 import { Router } from '@angular/router';
-import { CompileShallowModuleMetadata } from '@angular/compiler';
+
 
 @Component({
   selector: 'app-login',
@@ -33,7 +33,6 @@ loginform!:FormGroup;
     login(formvalue:any){
       console.log(formvalue);
       console.log("login start");
-      // this.localfunction(formvalue);
       this.api.displayDetails().subscribe(data=>{
         this.logindata=data;
         this.logindata=this.logindata.data.docs;
@@ -58,13 +57,4 @@ loginform!:FormGroup;
         }
       },1000);
     }
-    //  localfunction(_formvalue:any){
-    //   console.log('local storage demo works');
-    //   localStorage.setItem("formvalue",JSON.stringify(this.loginform.value))
-    //   this.display()
-    // }
-    // display(){
-    //   this.myId=localStorage.getItem('formvalue');
-    //   console.log(this.myId)
-    // }
       }
