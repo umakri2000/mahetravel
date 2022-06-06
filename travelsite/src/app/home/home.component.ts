@@ -9,6 +9,7 @@ export class HomeComponent implements OnInit {
   constructor(private router:Router) { }
   name:any;
   ngOnInit(): void {
+    //to over comes sonarlint code sense
   }
   // functio to navigate to another pages
 goToPage(place:string){

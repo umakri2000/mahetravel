@@ -50,7 +50,4 @@ console.log(this.aadhar);
   }
 }
 }
-// navigate(place:string){
-//   this.router.navigate([`${place}`])
-// }
 }
