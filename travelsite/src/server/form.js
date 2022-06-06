@@ -170,7 +170,7 @@ dbconnection.post_travel(object,'projecttravel').then(_res=>{
   const err ={
     status:404,
     message:'OOPS',
-    data:res,
+    data:_res,
   }
   if (_res) {
     response.send(teststatus);
@@ -273,7 +273,7 @@ app.post('/email',(request,_response)=>{
     type:'user'
   }
   setmail.getemail(request.body.email);
-  console.log(object)
+  console.log(object);
 })
   app.delete("/delete/:id/:id1", (request, response) => {
     dbconnection.del_id(request.params.id,request.params.id1, "projecttravel").then((_res)=>{
@@ -284,12 +284,12 @@ app.post('/email',(request,_response)=>{
       }
     });
   });
-  app.delete("/deletehotel/:id/:id1", (_request,_response) => {
-    dbconnection.del_id(_request.params.id,_request.params.id1, "projecttravel").then((_res)=>{
+  app.delete("/deletehotel/:id/:id1", (_request, response) => {
+    dbconnection.del_id(_request.params.id,_request.params.id1, "projecttravel").then((_res) => {
       if (_res) {
-        _response.send(_res);
+        response.send(_res);
       } else {
-        _response.send("error");
+        response.send("error");
       }
     });
   });
