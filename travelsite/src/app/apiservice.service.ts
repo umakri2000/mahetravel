@@ -15,6 +15,10 @@ loginform:any;
   {
     return this.http.post('http://localhost:8000/travel',formvalue);
   }
+  signup(formvalue:any){
+    return this.http.post('http://localhost:8000/signup',formvalue)
+
+  }
   displayDetails(){
     return this.http.get('http://localhost:8000/displayDetails')
   }
@@ -30,9 +34,13 @@ loginform:any;
   packageoffer(){
       return this.http.get(`http://localhost:8000/viewpackage`)      // to get all package details
     }
-    adminpackage(Formvalue:any){
+  adminpackage(Formvalue:any){
       return this.http.post('http://localhost:8000/addpackage',Formvalue)
     }
+  getsignup(){
+
+    return this.http.get('http://localhost:8000/getsignup')
+  }
   showoff(){
     this.loginshow=!this.loginshow;
   
@@ -42,11 +50,6 @@ loginform:any;
   deletehotel(id:any,id1:any){
     return this.http.delete(`http://localhost:8000/deletehotel/${id}/${id1}`)
   }
-  // localfunction(formvalue:any){
-  //   console.log('local storage demo works');
-  //   localStorage.setItem("formvalue",JSON.stringify(this.loginform.value))
-   
-  // }
   viewFlights(){
     return this.http.get('http://localhost:8000/flightDetails')
      }

@@ -39,7 +39,6 @@
                         *ngIf="bookFlight.controls['email'].touched && bookFlight.hasError('required','email')">*Email is
                         required </span>
                 </div>
-              
                 <div class="form-group">
                     <label for="flight" class="text-dark" >FLIGHT :</label>
                     <br>
@@ -83,16 +82,15 @@
                     <th scope="col">EMAIL</th>
                     <th scope="col">flight</th>
                     <th scope="col">status</th>
-                    
                 </tr>
             </thead>
             <tbody class="text-light" style="color:brown" >
                 <tr *ngFor="let obj of object|filter:search">
-                    <td scope="row">{{obj.name}}</td>
-                    <td scope="row">{{obj.mobileNumber}}</td>
-                    <td scope="row">{{obj.email}}</td>
-                    <td scope="row">{{obj.fligth}}</td>
-                    <td scope="row">BOOKED</td>
+                    <td>{{obj.name}}</td>
+                    <td>{{obj.mobileNumber}}</td>
+                    <td>{{obj.email}}</td>
+                    <td>{{obj.fligth}}</td>
+                    <td>BOOKED</td>
                     
 
                 </tr>

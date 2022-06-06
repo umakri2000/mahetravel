@@ -24,15 +24,13 @@ export class BookFlightComponent implements OnInit {
       'flight':['',Validators.required],
       'email':['',Validators.required],
       'seat':['',Validators.required],
-      //  'passport':['',Validators.required],
-        // 'aadhar':['',Validators.required],
        
     })
   }
   // post the flight passanger data
   ticketFlight(Formvalue:NgForm){
     console.log(Formvalue);
-    this.api.bookFlight(Formvalue).subscribe((data: any)=>{
+    this.api.bookFlight(Formvalue).subscribe((_data: any)=>{
     })
     alert('your flight was booked!!!')
 

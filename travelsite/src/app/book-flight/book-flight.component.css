@@ -4,9 +4,6 @@
 div.card.mx-auto{
     width:50%;
 }
-th {
-    text-decoration: none;
-}
 div.button.text-center{
 padding:8px;
 }
@@ -17,6 +14,7 @@ th{
     color: dodgerblue;
     background-color:rgb(67, 215, 215);
     margin-bottom:45%;
+    text-decoration: none;
 }
 div.card-header.text-center{
     background-color: aquamarine;

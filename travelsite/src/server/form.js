@@ -45,12 +45,60 @@ app.post("/travel", (request, response) => {
             
       })
     });
+    app.post("/signup", (request, response) => {
+      console.log(request);
+      const object = {
+        
+        first_name:request.body.first_name,
+        email: request.body.email,
+        password:request.body.password,
+        type:'signup',
+      };
+        dbconnection.post_travel(object,'projecttravel').then((res)=>{
+          const teststatus={
+            status:201,
+            message: "TRAVELLER was registered Successfully into the database",
+            data: res,
+          }
+          const err ={
+            status:404,
+            message:'OOPS',
+            data:res,
+          }
+          if (res) {
+            response.send(teststatus);
+          } else {
+            response.send(err);
+          }
+                
+          })
+        });
     app.get("/displayDetails", (request, response) => {
         console.log(request);
         console.log("begin to write data");
         const data = {
           selector:{
             type:'user'
+          }
+        }
+        dbconnection.get(data,"projecttravel").then((res) => {
+          const teststatus={
+            status:200,
+            message: "TRAVELLER was registered Successfully into the database",
+            data: res,
+          }
+          if (res) {
+            response.send(teststatus);
+          } else {
+            response.send("error");
+          }
+        });
+      }); 
+      app.get("/getsignup", (request, response) => {
+        console.log(request);
+        const data = {
+          selector:{
+            type:'signup'
           }
         }
         dbconnection.get(data,"projecttravel").then((res) => {
@@ -84,7 +132,7 @@ app.post("/travel", (request, response) => {
             const teststatus={
               status:201,
               message: "TRAVELLER was registered Successfully into the database",
-              data: res,
+              data:_res,
             }
             const err ={
               status:404,
@@ -194,12 +242,12 @@ dbconnection.post_travel(object,'projecttravel').then(_res=>{
       const teststatus={
         status:200,
         message: "TRAVELLER was registered Successfully into the database",
-        data: res,
+        data: _res,
       }
       const err ={
         status:404,
         message:'OOPS',
-        data:res,
+        data:_res,
       }
       if (_res) {
         response.send(teststatus);
@@ -262,14 +310,14 @@ dbconnection.get(data,"projecttravel").then((res) => {
 });
 });
 app.post('/email',(request,_response)=>{
-  var object ={
+  let object ={
     first_name: request.body.first_name,
     mobileNumber:request.body.mobileNumber,
     email: request.body.email,
     date:request.body.date,
     place:request.body.place,
     aadhar:request.body.aadhar,
-    // file:request.body.file,
+
     type:'user'
   }
   setmail.getemail(request.body.email);

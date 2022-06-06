@@ -55,20 +55,12 @@ export class HotelComponent implements OnInit {
     
     })
   }
-  // delete_travel(data:any,data1:any){
-  //   this.api.deletehotel(data._id,data1._rev).subscribe(res=>{
-  //     location.reload();
-  //   },rej=>{
-  //     console.log('Error',rej);   
-  //   })
-       
-    //  }
      // to block the past date in the calculator
     futuredate(){
-      var date = new Date();
-      var currentdate:any = date.getDate();
-      var currentmonth:any = date.getMonth() + 1;
-      var currentyear:any = date.getFullYear();
+      let date = new Date();
+      let currentdate:any = date.getDate();
+      let currentmonth:any = date.getMonth() + 1;
+      let currentyear:any = date.getFullYear();
       if (currentdate < 10){
         currentdate = "0" + currentdate;
       }

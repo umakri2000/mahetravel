@@ -33,7 +33,7 @@ loginform!:FormGroup;
     login(formvalue:any){
       console.log(formvalue);
       console.log("login start");
-      this.api.displayDetails().subscribe(data=>{
+      this.api.getsignup().subscribe(data=>{
         this.logindata=data;
         this.logindata=this.logindata.data.docs;
         console.log(this.logindata);
@@ -45,7 +45,7 @@ loginform!:FormGroup;
       // to check the valid mail for login
       setTimeout(() => {
         for (const iterator of this.object) {
-          if(iterator.email == formvalue.email ){
+          if(iterator.email == formvalue.email && iterator.password == formvalue.password ){
             this.api.showoff();
             console.log("login");
             // alert('success')

@@ -47,10 +47,10 @@ traveldate:any;
   }
   // function for disable past date
   futuredate(){
-    var date = new Date();
-    var presentdate:any = date.getDate();
-    var presentmonth:any = date.getMonth() + 1;
-    var presentyear:any = date.getFullYear();
+    let date = new Date();
+    let presentdate:any = date.getDate();
+    let presentmonth:any = date.getMonth() + 1;
+    let presentyear:any = date.getFullYear();
     if (presentdate < 10){
       presentdate = "0" + presentdate;
     }

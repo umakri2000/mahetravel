@@ -19,6 +19,7 @@ import { AdmindashboardComponent } from './admindashboard/admindashboard.compone
 import { ViewpassangerComponent } from './viewpassanger/viewpassanger.component';
 import { PackagesComponent } from './packages/packages.component';
 import { StatusComponent } from './status/status.component';
+import { SignupComponent } from './signup/signup.component';
 const routes: Routes = [
 {path:'register',component:RegisterComponent},
 {path:'login',component:LoginComponent},
@@ -35,6 +36,7 @@ const routes: Routes = [
 {path:'tourdarjeeling',component:TourdarjeelingComponent},
 {path:'admin',component:AdminComponent},
 {path:'home',component:HomeComponent},
+{path:'signup',component: SignupComponent},
 {path:'viewpassanger',component:ViewpassangerComponent},
 {path:'viewhotel',component:ViewhotelComponent},
 {path:'flights',component:FlightsComponent,

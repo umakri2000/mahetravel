@@ -3,6 +3,7 @@
         <input type="search" [(ngModel)]="search" class="form-control mt-5 search" placeholder="Enter Your Data" />
         <button type="submit" class="btn btn-primary" (click)="passangerlist()">VIEWpackage</button>
         <table class="table bg-light">
+            <caption>passangerlist</caption>
             <thead class="text-dark">
                 <tr>
                     <th scope="col">Name</th>
@@ -17,11 +18,11 @@
             </thead>
             <tbody class="text-dark">
                 <tr *ngFor="let obj of object |filter:search">
-                    <td scope="row">{{obj.first_name}}</td>
-                    <td scope="row">{{obj.place}}</td>
-                    <td scope="row">{{obj.email}}</td>
-                    <td scope="row">{{obj.date}}</td>
-                    <td scope="row"><button type="button" class="btn btn-outline-dark" (click)="delete_travel(obj,obj)">Delete</button>
+                    <td>{{obj.first_name}}</td>
+                    <td>{{obj.place}}</td>
+                    <td>{{obj.email}}</td>
+                    <td>{{obj.date}}</td>
+                    <td><button type="button" class="btn btn-outline-dark" (click)="delete_travel(obj,obj)">Delete</button>
                     
 
                 </tr>

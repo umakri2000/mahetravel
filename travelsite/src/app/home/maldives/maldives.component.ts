@@ -50,10 +50,10 @@ export class MaldivesComponent implements OnInit {
   }
   // function for disable past date
   calcdate(){
-    var date = new Date();
-    var presentdate:any = date.getDate();
-    var presentmonth:any = date.getMonth() + 1;
-    var presentyear:any = date.getFullYear();
+    let date = new Date();
+    let presentdate:any = date.getDate();
+    let presentmonth:any = date.getMonth() + 1;
+    let presentyear:any = date.getFullYear();
     if (presentdate < 10){
       presentdate = "0" + presentdate;
     }

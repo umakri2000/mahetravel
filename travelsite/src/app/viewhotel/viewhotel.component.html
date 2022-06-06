@@ -19,13 +19,13 @@
         </thead>
         <tbody class="text-dark">
             <tr *ngFor="let obj of object| filter:search">
-                <td scope="row">{{obj.name}}</td>
-                <td scope="row">{{obj.email}}</td>
-                <td scope="row">{{obj.hotel}}</td>
-                <td scope="row">{{obj.food}}</td>
-                <td scope="row">{{obj.date}}</td>
-                <td scope="row">booked</td>
-                    <td scope="row"><button type="button" class="btn btn-outline-dark" (click)="deletehotel(obj,obj)">REJECT</button>
+                <td>{{obj.name}}</td>
+                <td>{{obj.email}}</td>
+                <td>{{obj.hotel}}</td>
+                <td>{{obj.food}}</td>
+                <td>{{obj.date}}</td>
+                <td>booked</td>
+                    <td><button type="button" class="btn btn-outline-dark" (click)="deletehotel(obj,obj)">REJECT</button>
 
                         </td>
                 

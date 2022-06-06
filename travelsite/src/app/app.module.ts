@@ -26,6 +26,7 @@ import { AdmindashboardComponent } from './admindashboard/admindashboard.compone
 import { InfoComponent } from './info/info.component';
 import { TicketComponent } from './ticket/ticket.component';
 import { StatusComponent } from './status/status.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { StatusComponent } from './status/status.component';
     AdmindashboardComponent,
     InfoComponent,
     TicketComponent,
-    StatusComponent
+    StatusComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,FormsModule,

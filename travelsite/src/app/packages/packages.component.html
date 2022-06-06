@@ -20,9 +20,9 @@
     </thead>
     <tbody class="text-light">
         <tr *ngFor="let obj of object|filter:search">
-            <td scope="row">{{obj.place}}</td>
-            <td scope="row">{{obj.price}}</td>
-            <td scope="row">{{obj.package}}</td>
+            <td>{{obj.place}}</td>
+            <td>{{obj.price}}</td>
+            <td>{{obj.package}}</td>
         <td><button type="submit" class="btn btn-primary"(click)="goToPage7('register')">BOOK</button></td>
         </tr>
     </tbody>
