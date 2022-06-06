@@ -53,16 +53,16 @@ app.post("/travel", (request, response) => {
         password:request.body.password,
         type:'signup',
       };
-        dbconnection.post_travel(object,'projecttravel').then((res)=>{
+        dbconnection.post_travel(object,'projecttravel').then((_res)=>{
           const teststatus={
             status:201,
             message: "TRAVELLER was registered Successfully into the database",
-            data: res,
+            data: _res,
           }
           const err ={
             status:404,
             message:'OOPS',
-            data:res,
+            data:_res,
           }
           if (res) {
             response.send(teststatus);
@@ -100,13 +100,13 @@ app.post("/travel", (request, response) => {
             type:'signup'
           }
         }
-        dbconnection.get(data,"projecttravel").then((res) => {
+        dbconnection.get(data,"projecttravel").then((_res) => {
           const teststatus={
             status:200,
             message: "TRAVELLER was registered Successfully into the database",
-            data: res,
+            data: _res,
           }
-          if (res) {
+          if (_res) {
             response.send(teststatus);
           } else {
             response.send("error");
@@ -331,7 +331,7 @@ app.post('/email',(request,_response)=>{
     });
   });
   app.delete("/deletehotel/:id/:id1", (_request, response) => {
-    dbconnection.del_id(_request.params.id,_request.params.id1, "projecttravel").then((_res) => {
+    dbconnection.del_id(_request.params.id,_request.params.id1, "projecttravel").then((_res)=>{
       if (_res) {
         response.send(_res);
       } else {
