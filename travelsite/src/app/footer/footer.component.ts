@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    // to overcome empty constructor
+  }
 
   ngOnInit(): void {
     // to covercome sonar lint code smell
