@@ -12,6 +12,8 @@ export class FlightsComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    // to covercome sonar lint code smell
+
   }
 
 }

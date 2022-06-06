@@ -11,6 +11,8 @@ show:boolean=true;
   constructor(private router:Router) { }
 
   ngOnInit(): void {
+    // to covercome sonar lint code smell
+    
   }
   goToPageAddPackage(place:string){
     this.router.navigate([`${place}`])

@@ -10,6 +10,7 @@ export class FooterComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    // to covercome sonar lint code smell
   }
 
 }

@@ -14,6 +14,8 @@ search!:string;
   constructor(private api :ApiserviceService) { }
 
   ngOnInit(): void {
+    // to covercome sonar lint code smell
+
   }
   viewPackage(){
     this.api.packageOffer().subscribe(data=>{

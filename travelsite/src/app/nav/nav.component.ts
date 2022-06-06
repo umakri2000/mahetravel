@@ -13,6 +13,7 @@ export class NavComponent implements OnInit {
   constructor(public api :ApiserviceService,private router:Router) { }
 name:any
   ngOnInit(): void {
+    // to covercome sonar lint code smell
    
   }
 
