@@ -31,6 +31,7 @@ export class BookFlightComponent implements OnInit {
   ticketFlight(Formvalue:NgForm){
     console.log(Formvalue);
     this.api.bookFlight(Formvalue).subscribe((_data: any)=>{
+      console.log(_data);
     })
     alert('your flight was booked!!!')
 

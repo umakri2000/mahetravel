@@ -11,7 +11,9 @@ name:any;
 place:any;
 date:any;
 mobileNumber:any;
-  constructor() { }
+  constructor() { 
+    // to overcome sonar code-smell
+  }
 
   ngOnInit(): void {
     let local:any=localStorage.getItem("formvalue");
