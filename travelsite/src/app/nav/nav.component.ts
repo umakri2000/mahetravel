@@ -13,18 +13,14 @@ export class NavComponent implements OnInit {
   constructor(public api :ApiserviceService,private router:Router) { }
 name:any
   ngOnInit(): void {
-    let local:any=localStorage.getItem("formvalue");
-    let parsed=JSON.parse(local);
-    this.name=parsed.email;
    
   }
 
 // function for logout
-logout(){
+logOut(){
   this.api.loginshow=false;
   this.api.show=true;
   this.router.navigate(['/login']);
-  console.log(this.name);
 }
 
 }

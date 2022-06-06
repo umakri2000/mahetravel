@@ -4,13 +4,13 @@
             <h1 class="text-light">SIGNUP-PAGE </h1>
         </div>
         <div class="card-body">
-            <form [formGroup]="signupform">
+            <form [formGroup]="signupForm">
                 <div class="form-group">
                     <label for="NAME" class="text-dark">Username :</label>
                     <input type="text" id="name" class="form-control" placeholder="Enter Username"
                         formControlName="first_name">
                     <span class="text-danger"
-                        *ngIf="signupform.controls['name'].touched &&signupform.hasError('required','name')">*
+                        *ngIf="signupForm.controls['name'].touched &&signupForm.hasError('required','name')">*
                         Name
                         is required!!</span>
                 </div>
@@ -19,7 +19,7 @@
                     <input type="email" id="email" class="form-control" placeholder="Enter Username"
                         formControlName="email">
                     <span class="text-danger"
-                        *ngIf="signupform.controls['email'].touched &&signupform.hasError('required','email')">*
+                        *ngIf="signupForm.controls['email'].touched &&signupForm.hasError('required','email')">*
                         Name
                         is required!!</span>
                 </div>
@@ -28,11 +28,11 @@
                     <input type="password" id="Password1" class="form-control" placeholder="Password"
                         formControlName="password">
                      <span class="text-danger"
-                        *ngIf="signupform.controls['password'].touched &&signupform.hasError('required','password')">*Password
+                        *ngIf="signupForm.controls['password'].touched &&signupForm.hasError('required','password')">*Password
                         is required!!</span>
                 </div>
                 <div>
-                    <button type="submit" class="btn btn-primary "[disabled]="!signupform.valid" (click)="login(this.signupform.value)" >Log
+                    <button type="submit" class="btn btn-primary "[disabled]="!signupForm.valid" (click)="login(this.signupForm.value)" >Log
                         in</button>
                     <p class="signup"> Have an account?<a routerLink="/login">Sign in</a></p>
                 </div>

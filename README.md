@@ -1,4 +1,5 @@
-# mahetravel# Title
+# mahetravel
+# Title
 
 TRAVEL TICKET BOOKING SITE
 
@@ -83,10 +84,8 @@ command to install: npm install npm-package_name
 
 1. "body-parser": "^1.20.0",
 2. "cors": "^2.8.5",
-3. "express": "^4.18.1",
-4. "joi": "^17.6.0",
-5. "nano": "^10.0.0",
-6. "winston": "^3.7.2"
+3. "nano": "^10.0.0",
+
 
 # Database
 

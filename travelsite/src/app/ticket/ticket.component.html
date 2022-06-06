@@ -2,7 +2,7 @@
     <span class="form-outline">
         <input type="search" [(ngModel)]="search" class="form-control mt-5 search" placeholder="Enter Your Data" /></span>
     </div>
-    <span><em class="fa fa-search" aria-hidden="true"(click)="viewpackage()"></em></span>
+    <span><em class="fa fa-search" aria-hidden="true"(click)="viewPackage()"></em></span>
 
 <div class="input-group">
 <table class="table dark">
@@ -24,7 +24,7 @@
             <td scope="row">{{obj.place}}</td>
             <td scope="row">{{obj.price}}</td>
             <td scope="row">{{obj.package}}</td>
-        <td><button type="submit" class="btn btn-primary"(click)="deletehotel(obj,obj)">delete</button></td>
+        <td><button type="submit" class="btn btn-primary"(click)="deleteTrip(obj,obj)">delete</button></td>
         </tr>
     </tbody>
 </table>

@@ -1,7 +1,7 @@
 <div class="input-group">
     <div class="form-outline">
         <input type="search" [(ngModel)]="search" class="form-control mt-5 search" placeholder="Enter Your Data" />
-        <button type="submit" class="btn btn-primary" (click)="hotellist()">VIEWpackage</button> 
+        <button type="submit" class="btn btn-primary" (click)="hotelList()">VIEWpackage</button> 
     </div>
     </div>
     <table class="table bg-light ">
@@ -25,11 +25,6 @@
                 <td>{{obj.food}}</td>
                 <td>{{obj.date}}</td>
                 <td>booked</td>
-                    <td><button type="button" class="btn btn-outline-dark" (click)="deletehotel(obj,obj)">REJECT</button>
-
-                        </td>
-                
-
             </tr>
         </tbody>
     </table>

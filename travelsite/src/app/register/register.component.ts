@@ -8,27 +8,26 @@ import { ApiserviceService } from '../apiservice.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  traveldata:any;
-  // value:boolean=true;
+  travelData:any;
   object :any= [];
   object1 :any= [];
   bookup!:FormGroup;
   search!:string;
-  alldata:any;
+  allData:any;
   flag=0;
   place:any=[]
-  packagedata:any
+  packageData:any
   objectcheck:any=[];
   maxdate:any;
-  formshow!:boolean;
+  formShow!:boolean;
   show:boolean=false;
   constructor(private formbuilder:FormBuilder,private api:ApiserviceService) {
    }
  
   ngOnInit(): void {
-    this.formshow=true;
-     this.viewpackage()
-      this.futuredate();
+    this.formShow=true;
+     this.viewPackage()
+      this.futureDate();
     this.bookup = this.formbuilder.group(
       {
         
@@ -45,7 +44,7 @@ export class RegisterComponent implements OnInit {
 
 
 
-    ticketBookform(Formvalue:any){
+    ticketBookForm(Formvalue:any){
     
       this.api.bookData(Formvalue).subscribe((data: any)=>{
         console.log(data);
@@ -62,10 +61,10 @@ export class RegisterComponent implements OnInit {
     this.api.displayDetails().subscribe(data=>{  
       console.log(data)
       console.log(data)            
-      this.traveldata=data;
-      this.traveldata=this.traveldata.data.docs;
-      console.log(this.traveldata);
-      for(const i of this.traveldata){
+      this.travelData=data;
+      this.travelData=this.travelData.data.docs;
+      console.log(this.travelData);
+      for(const i of this.travelData){
             this.object1.push(i);
            }
       })
@@ -73,10 +72,10 @@ export class RegisterComponent implements OnInit {
  repeatvalidation(formvalue:any){
        
   this.api.displayDetails().subscribe(data=>{               
-    this.traveldata=data;
-    this.traveldata=this.traveldata.data.docs;
-    console.log(this.traveldata);
-    for(const i of this.traveldata){
+    this.travelData=data;
+    this.travelData=this.travelData.data.docs;
+    console.log(this.travelData);
+    for(const i of this.travelData){
           this.object1.push(i);
           console.log(i.aadhar);
           
@@ -89,18 +88,18 @@ export class RegisterComponent implements OnInit {
              alert('aadhar number exist');
            }
            else{
-             this.ticketBookform(formvalue);
+             this.ticketBookForm(formvalue);
            }
          }, 1000);
     })
 
-}viewpackage(){
+}viewPackage(){
       this.api.packageoffer().subscribe(data=>{
         console.log(data);
-        this.packagedata=data;
-        this.packagedata=this.packagedata.data.docs;
-        console.log(this.packagedata);
-        for(const i of this.packagedata){
+        this.packageData=data;
+        this.packageData=this.packageData.data.docs;
+        console.log(this.packageData);
+        for(const i of this.packageData){
               console.log(i);
               this.place.push(i);
         }
@@ -109,7 +108,7 @@ export class RegisterComponent implements OnInit {
     } 
 
     // to block the past date in the calculator
-    futuredate(){
+    futureDate(){
       let date = new Date();
       let currentdate:any = date.getDate();
       let currentmonth:any = date.getMonth() + 1;
@@ -124,9 +123,8 @@ export class RegisterComponent implements OnInit {
       console.log(this.maxdate);
       
     }
-    showoff(){
-      this.formshow=!this.formshow;
-      console.log(this.formshow);
+    showOff(){
+      this.formShow=!this.formShow;
       this.show=!this.show;
     }
     sendmail(Formvalue:any){

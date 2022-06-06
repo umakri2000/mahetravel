@@ -16,7 +16,7 @@ export class ViewpassangerComponent implements OnInit {
   ngOnInit(): void {
   }
   // to view the passanger list
-  passangerlist() {
+  passangerList() {
     this.api.displayDetails().subscribe(data=>{
       this.traveldata=data;
       this.traveldata=this.traveldata.data.docs;
@@ -30,15 +30,5 @@ export class ViewpassangerComponent implements OnInit {
         
     
   )}
-  //delete the traveller data 
-  delete_travel(data:any,data1:any){
-    this.api.deletepassanger(data._id,data1._rev).subscribe(res=>{
-      console.log(res)
-      location.reload();
-    },rej=>{
-      console.log('Error',rej);   
-    })
-       
-     }
 }
 

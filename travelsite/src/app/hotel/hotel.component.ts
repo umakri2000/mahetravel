@@ -30,7 +30,7 @@ export class HotelComponent implements OnInit {
 
 
     })
-    this.futuredate();
+    this.futureDate();
   }
   bookHotel(Formvalue:NgForm){
     console.log(Formvalue);
@@ -39,7 +39,7 @@ export class HotelComponent implements OnInit {
     })
     alert('your room was booked!!!')
   }
-  hotellist() {
+  hotelList() {
     
     this.api.viewhotel().subscribe(data=>{
       console.log(data);
@@ -56,7 +56,7 @@ export class HotelComponent implements OnInit {
     })
   }
      // to block the past date in the calculator
-    futuredate(){
+    futureDate(){
       let date = new Date();
       let currentdate:any = date.getDate();
       let currentmonth:any = date.getMonth() + 1;

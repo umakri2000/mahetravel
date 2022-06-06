@@ -7,11 +7,11 @@ import { ApiserviceService } from '../apiservice.service';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-signupform!:FormGroup;
+signupForm!:FormGroup;
   constructor(private formbuilder:FormBuilder,private api:ApiserviceService) { }
 
   ngOnInit(): void {
-    this.signupform=this.formbuilder.group(
+    this.signupForm=this.formbuilder.group(
       {
         'email':['',Validators.required],
          'password':['',Validators.required],
@@ -21,7 +21,6 @@ signupform!:FormGroup;
    
   }
   login(formvalue:any){
-    console.log('signup works')
     this.api.signup(formvalue).subscribe((data: any)=>{
       console.log(data);
     }

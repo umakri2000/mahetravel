@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class PackagesComponent implements OnInit {
 object:any=[];
-packagedata:any;
+packageData:any;
 search!:string;
 
 constructor(private api:ApiserviceService,private router:Router) { }
@@ -18,14 +18,14 @@ constructor(private api:ApiserviceService,private router:Router) { }
   }
   // function to view packages
   
-viewpackage(){
+viewPackage(){
   this.api.packageoffer().subscribe(data=>{
     console.log(data);
     console.log('Data was fetching');
-    this.packagedata=data;
-    this.packagedata=this.packagedata.data.docs;
-    console.log(this.packagedata);
-    for(const i of this.packagedata){
+    this.packageData=data;
+    this.packageData=this.packageData.data.docs;
+    console.log(this.packageData);
+    for(const i of this.packageData){
           console.log(i);
           this.object.push(i);
           console.log('details of the traveller was successfully added');

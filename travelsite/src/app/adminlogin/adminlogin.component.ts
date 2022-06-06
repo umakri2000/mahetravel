@@ -23,9 +23,9 @@ admindata:any;
         _rev:['']
       }
     )
-      this.adminlogindb()
+      this.adminLoginDb()
   }
-adminlogin(formvalue:any){
+adminLogin(formvalue:any){
 for (const iterator of this.object) {
   
   if(iterator.username == formvalue.username && iterator.password==formvalue.password){
@@ -35,7 +35,7 @@ for (const iterator of this.object) {
   }
     }
   }}
-  adminlogindb() {
+  adminLoginDb() {
     this.api.adminlogindb().subscribe(data=>{
       console.log(data);
       

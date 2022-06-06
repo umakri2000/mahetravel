@@ -15,7 +15,7 @@ search!:string;
 
   ngOnInit(): void {
   }
-  viewpackage(){
+  viewPackage(){
     this.api.packageoffer().subscribe(data=>{
       console.log(data);
       console.log('Data was fetching');
@@ -30,7 +30,7 @@ search!:string;
     
     })
   }
-  deletehotel(data:any,data1:any){
+  deleteTrip(data:any,data1:any){
     this.api.deletehotel(data._id,data1._rev).subscribe(_res=>{
       location.reload();
     },rej=>{

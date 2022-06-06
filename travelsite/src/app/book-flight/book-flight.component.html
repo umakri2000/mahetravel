@@ -34,9 +34,9 @@
                 </div>
                 <div class="form-group">
                     <label for="email" class="text-dark">Email :</label>
-                    <input type="email" formControlName="email" class="form-control" placeholder="Enter Your Email ">
+                    <input type="email" formControlName="email" class="form-control" placeholder="Enter Your Email " pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$">
                     <span class="text-danger"
-                        *ngIf="bookFlight.controls['email'].touched && bookFlight.hasError('required','email')">*Email is
+                        *ngIf="bookFlight.controls['email'].touched && bookFlight.hasError('pattern','email')">*Email is
                         required </span>
                 </div>
                 <div class="form-group">

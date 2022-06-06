@@ -1,7 +1,7 @@
 <div class="input-group">
     <div class="form-outline">
         <input type="search" [(ngModel)]="search" class="form-control mt-5 search" placeholder="Enter Your Data" />
-        <button type="submit" class="btn btn-primary" (click)="passangerlist()">VIEWpackage</button>
+        <button type="submit" class="btn btn-primary" (click)="passangerList()">VIEWpackage</button>
         <table class="table bg-light">
             <caption>passangerlist</caption>
             <thead class="text-dark">
@@ -22,9 +22,7 @@
                     <td>{{obj.place}}</td>
                     <td>{{obj.email}}</td>
                     <td>{{obj.date}}</td>
-                    <td><button type="button" class="btn btn-outline-dark" (click)="delete_travel(obj,obj)">Delete</button>
-                    
-
+                    <td>Confirmed</td>
                 </tr>
             </tbody>
         </table>

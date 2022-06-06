@@ -7,34 +7,34 @@ import { ApiserviceService } from '../apiservice.service';
   styleUrls: ['./viewhotel.component.css']
 })
 export class ViewhotelComponent implements OnInit {
-hoteldata:any;
+hotelData:any;
 object:any=[];
 search!:string;
   constructor(private api:ApiserviceService, private formbuilder:FormBuilder) { }
 
   ngOnInit(): void {
-   this.hotellist()
+   this.hotelList()
   }
   // to view the traveller booked hotel
-  hotellist() {
+  hotelList() {
     this.api.viewhotel().subscribe(data=>{
       console.log(data)
-      this.hoteldata=data;
-      this.hoteldata=this.hoteldata.data.docs;
-      console.log(this.hoteldata);
-      for(const i of this.hoteldata){
+      this.hotelData=data;
+      this.hotelData=this.hotelData.data.docs;
+      console.log(this.hotelData);
+      for(const i of this.hotelData){
             console.log(i);
             this.object.push(i);
       }
     })
   }
   // to reject the request of the traeller
-  deletehotel(data:any,data1:any){
-    this.api.deletehotel(data._id,data1._rev).subscribe(_res=>{
-      location.reload();
-    },rej=>{
-      console.log('Error',rej);   
-    })
-     }
+  // deleteotel(data:any,data1:any){
+  //   this.api.deletehotel(data._id,data1._rev).subscribe(_res=>{
+  //     location.reload();
+  //   },rej=>{
+  //     console.log('Error',rej);   
+  //   })
+  //    }
 }
 

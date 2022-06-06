@@ -22,14 +22,13 @@ show:boolean=true;
     this.router.navigate([`${place}`])
     this.showOff();
   }
-  goToPagepassanger(place:string){
+  goToPagePassanger(place:string){
     this.router.navigate([`${place}`])
     this.showOff();
   }
   showOff(){
     console.log('hii')
     this.show=!this.show
-    // this.cardShow=!this.cardShow
     
   }
 }
