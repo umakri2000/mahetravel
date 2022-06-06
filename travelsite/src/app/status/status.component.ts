@@ -23,5 +23,7 @@ mobileNumber:any;
     this.mobileNumber=parsed.mobileNumber
   
   }
-
+print(){
+  window.print();
+}
 }

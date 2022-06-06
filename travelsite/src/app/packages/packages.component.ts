@@ -19,7 +19,7 @@ constructor(private api:ApiserviceService,private router:Router) { }
   // function to view packages
   
 viewPackage(){
-  this.api.packageoffer().subscribe(data=>{
+  this.api.packageOffer().subscribe(data=>{
     console.log(data);
     console.log('Data was fetching');
     this.packageData=data;

@@ -26,28 +26,28 @@ loginform:any;
     console.log(formvalue);
     return this.http.post('http://localhost:8000/hotel',formvalue)
   }
-  viewhotel(){
+  viewHotel(){
     return this.http.get('http://localhost:8000/hotelstatus')
   }
-  adminlogindb(){
+  adminLoginDb(){
     return this.http.get('http://localhost:8000/adminlogin')}
-  packageoffer(){
+  packageOffer(){
       return this.http.get(`http://localhost:8000/viewpackage`)      // to get all package details
     }
-  adminpackage(Formvalue:any){
+  adminPackage(Formvalue:any){
       return this.http.post('http://localhost:8000/addpackage',Formvalue)
     }
-  getsignup(){
+  getSignup(){
 
     return this.http.get('http://localhost:8000/getsignup')
   }
-  showoff(){
+  showOff(){
     this.loginshow=!this.loginshow;
   
     this.show=!this.show;
     console.log(this.show)
   }
-  deletehotel(id:any,id1:any){
+  deleteHotel(id:any,id1:any){
     return this.http.delete(`http://localhost:8000/deletehotel/${id}/${id1}`)
   }
   viewFlights(){

@@ -68,7 +68,7 @@ export class RegisterComponent implements OnInit {
            }
       })
  }
- repeatvalidation(formvalue:any){
+ repeatValidation(formvalue:any){
        
   this.api.displayDetails().subscribe(data=>{               
     this.travelData=data;
@@ -93,7 +93,7 @@ export class RegisterComponent implements OnInit {
     })
 
 }viewPackage(){
-      this.api.packageoffer().subscribe(data=>{
+      this.api.packageOffer().subscribe(data=>{
         console.log(data);
         this.packageData=data;
         this.packageData=this.packageData.data.docs;

@@ -36,7 +36,7 @@ for (const iterator of this.object) {
     }
   }}
   adminLoginDb() {
-    this.api.adminlogindb().subscribe(data=>{
+    this.api.adminLoginDb().subscribe(data=>{
       console.log(data);
       
       this.admindata=data;

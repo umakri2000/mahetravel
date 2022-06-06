@@ -27,7 +27,7 @@
                 </div>
                  <div class="form-group">
                     <label for="DATE" class="text-dark">DATE</label>
-                    <input type="date" formControlName="date" class="form-control" placeholder="Enter  the date" min="{{maxdate}}">
+                    <input type="date" formControlName="date" class="form-control" placeholder="Enter  the date" min="{{maxDate}}">
                     <span class="text-danger"
                         *ngIf="resortbook.controls['date'].touched && resortbook.hasError('required','date')">*date
                      is required </span>

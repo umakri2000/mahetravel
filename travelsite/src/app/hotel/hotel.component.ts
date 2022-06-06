@@ -10,11 +10,11 @@ import { ApiserviceService } from '../apiservice.service';
 export class HotelComponent implements OnInit {
   resortbook!:FormGroup;
   value:boolean=true;
-  hotelavailable:number = 5;
   search!:string;
-  hoteldata:any;
+  hotelData:any;
   object:any=[];
-  maxdate:any;
+  maxDate:any;
+  data:any;
   constructor(private formbuilder:FormBuilder,private api:ApiserviceService ) {}
 
   ngOnInit(): void {
@@ -41,13 +41,13 @@ export class HotelComponent implements OnInit {
   }
   hotelList() {
     
-    this.api.viewhotel().subscribe(data=>{
+    this.api.viewHotel().subscribe(data=>{
       console.log(data);
       console.log('Data was fetching');
-      this.hoteldata=data;
-      this.hoteldata=this.hoteldata.data.docs;
-      console.log(this.hoteldata);
-      for(const i of this.hoteldata){
+      this.hotelData=data;
+      this.hotelData=this.hotelData.data.docs;
+      console.log(this.hotelData);
+      for(const i of this.hotelData){
             console.log(i);
             this.object.push(i);
             console.log('details of the hotel data was successfully geted'); 
@@ -67,8 +67,8 @@ export class HotelComponent implements OnInit {
       if(currentmonth < 10){
         currentmonth = "0" + currentmonth;
       }
-      this.maxdate = currentyear + "-" + currentmonth + "-" + currentdate;
-      console.log(this.maxdate);
+      this.maxDate = currentyear + "-" + currentmonth + "-" + currentdate;
+    
       
     }
 }

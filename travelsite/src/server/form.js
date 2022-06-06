@@ -270,7 +270,6 @@ dbconnection.post_travel(object,'projecttravel').then(_res=>{
       type:'flight'
     };
     
-    // dbconnection.post_travel(object,'projecttravel').then((res)=>{
       dbconnection.post_travel(object,'projecttravel').then((_res)=>{
         const teststatus={
           status:201,
