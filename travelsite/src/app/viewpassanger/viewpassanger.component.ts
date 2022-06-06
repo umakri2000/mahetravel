@@ -14,6 +14,8 @@ export class ViewpassangerComponent implements OnInit {
   object:any=[]
   constructor(private formbuilder:FormBuilder,private api:ApiserviceService) { }
   ngOnInit(): void {
+    // to covercome sonar lint code smell
+
   }
   // to view the passanger list
   passangerList() {

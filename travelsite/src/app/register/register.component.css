@@ -24,10 +24,7 @@ img{
     width:300px;
     float:right;
 }
-td{
-    color:black;
-    background-color: lightpink;
-}
+
 div.container.mt-5{
   width: 55%;}
 .btn.btn-primary{
@@ -37,4 +34,12 @@ div.container.mt-5{
 #search{
     width:100vw;
     display:block;
+}
+tr:nth-child(odd) {
+    background-color: dodgerblue;
+    color:white; 
+}
+th{
+    background-color: white;
+    color:black;
 }

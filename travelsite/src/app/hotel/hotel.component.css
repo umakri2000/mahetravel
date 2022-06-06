@@ -15,3 +15,11 @@ div.container.mt-5{
 .button.btn-primary{
     margin-top:34px;
 }
+tr:nth-child(odd) {
+    background-color: dodgerblue;
+    color:white; 
+}
+th{
+    background-color: white;
+    color:black;
+}

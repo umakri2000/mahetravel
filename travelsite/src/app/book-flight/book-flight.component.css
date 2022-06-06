@@ -19,3 +19,11 @@ th{
 div.card-header.text-center{
     background-color: aquamarine;
 }
+tr:nth-child(odd) {
+    background-color: dodgerblue;
+    color:white; 
+}
+th{
+    background-color: white;
+    color:black;
+}

@@ -1,0 +1,8 @@
+tr:nth-child(odd) {
+    background-color: dodgerblue;
+    color:white; 
+}
+th{
+    background-color: white;
+    color:black;
+}
