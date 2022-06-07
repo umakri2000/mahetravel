@@ -14,15 +14,18 @@ Travel Booking Site:
 
 
 # Project structure
-HOME-->USER LOGIN--> TICKET BOOKING FOR TRIP---> USER CAN DOWNLOAD THE TRIP TICKET
-                 --> BOOK FOR HOTEL
-                 --> BOOK FOR  FLIGHT
-       ADMIN LOGIN --> ADD PACKAGES
-                   --> DELETE PACKAGES
-                   --> SEE THE PEOPLE BOOKS FOR HOTEL AND TRIPS
+
                          
               
-
+ HOME---> - USERLOGIN
+              - BOOK TICKET FOR TRIPS.--> USER CAN DOWNLOAD THE TRIP DATA
+              - BOOK TICKET FOR HOTELS
+          - ADMIN
+               -ADD TRIPS
+               -DELETE TRIPS
+                                 
+              
+              -
 # How to use the project
 
 1.  First you need not to login to my site.You can visit the packages.
