@@ -15,7 +15,10 @@ Travel Booking Site:
 
 # Project structure
 
-   HOME   LOGIN                  
+   HOME   USERLOGIN--> BOOK TICKET FOR TRIP    ADMIN -->ADD AND DELETE PACKAGES
+               --> BOOK FOR LIMITED HOTEL        --> SEE THE PASSENGER    
+               --> BOOK FOR FLIGHT TICKETS       ---> SEE THE HOTEL-BOOKIG LIST
+                         
               
 
 # How to use the project
@@ -33,6 +36,7 @@ Travel Booking Site:
 6.  HOTEL--> User can book the limited hotel offered by the site
 
 7. See lisit --> Admin can see the lisit of the passangers booked for hotel and trips
+8. TICKET  --> USER can dowload the ticket.
 
 # Install and run it locally
 
