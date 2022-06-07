@@ -19,7 +19,7 @@ show:boolean=true;
     this.showOff();
 
   }
-  goToPagehotel(place:string)
+  goToPageHotel(place:string)
   {
     this.router.navigate([`${place}`])
     this.showOff();

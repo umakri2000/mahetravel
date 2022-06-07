@@ -47,6 +47,8 @@ children: [
  
 ]
 },
+{path:'',redirectTo:'home', pathMatch: 'full' },
+
 ]
 
 @NgModule({

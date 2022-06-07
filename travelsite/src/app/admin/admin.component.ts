@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class AdminComponent implements OnInit {
   admin!:FormGroup;
-  traveldata:any;
+  travelData:any;
   object:any=[]
   constructor(private formbuilder:FormBuilder,private api:ApiserviceService,private router:Router) {
    }

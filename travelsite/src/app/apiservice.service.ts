@@ -32,7 +32,7 @@ loginform:any;
   adminLoginDb(){
     return this.http.get('http://localhost:8000/adminlogin')}
   packageOffer(){
-      return this.http.get(`http://localhost:8000/viewpackage`)      // to get all package details
+      return this.http.get(`http://localhost:8000/viewpackage`)   
     }
   adminPackage(Formvalue:any){
       return this.http.post('http://localhost:8000/addpackage',Formvalue)
@@ -56,8 +56,6 @@ loginform:any;
   bookFlight(formvalue:any){
     return this.http.post('http://localhost:8000/postflightbooking',formvalue)
   }
-  deletepassanger(id:any,id1:any){
-    return this.http.delete(`http://localhost:8000/delete/${id}/${id1}`);
-  }
+ 
   
 }
