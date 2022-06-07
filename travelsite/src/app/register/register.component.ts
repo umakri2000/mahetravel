@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators,FormBuilder} from '@angular/forms';
+import { Router } from '@angular/router';
 import { ApiserviceService } from '../apiservice.service';
 
 @Component({
@@ -18,10 +19,10 @@ export class RegisterComponent implements OnInit {
   place:any=[]
   packageData:any
   objectcheck:any=[];
-  maxdate:any;
+  maxDate:any;
   formShow!:boolean;
   show:boolean=false;
-  constructor(private formbuilder:FormBuilder,private api:ApiserviceService) {
+  constructor(private formbuilder:FormBuilder,private api:ApiserviceService,private router:Router) {
    }
  
   ngOnInit(): void {
@@ -52,17 +53,15 @@ export class RegisterComponent implements OnInit {
 
 
         alert('Your Ticket was booked!!!!!!!!!')
+        this.router.navigate(['/home']);
 
       })
   }
   // to display the status of the passangers
   displayDetails(_formvalue:any) {
     this.api.displayDetails().subscribe(data=>{  
-      console.log(data)
-      console.log(data)            
       this.travelData=data;
       this.travelData=this.travelData.data.docs;
-      console.log(this.travelData);
       for(const i of this.travelData){
             this.object1.push(i);
            }
@@ -73,10 +72,8 @@ export class RegisterComponent implements OnInit {
   this.api.displayDetails().subscribe(data=>{               
     this.travelData=data;
     this.travelData=this.travelData.data.docs;
-    console.log(this.travelData);
     for(const i of this.travelData){
           this.object1.push(i);
-          console.log(i.aadhar);
           
           if(i.aadhar == formvalue.aadhar){
             this.flag=1;
@@ -118,8 +115,7 @@ export class RegisterComponent implements OnInit {
       if(currentmonth < 10){
         currentmonth = "0" + currentmonth;
       }
-      this.maxdate = currentyear + "-" + currentmonth + "-" + currentdate;
-      console.log(this.maxdate);
+      this.maxDate = currentyear + "-" + currentmonth + "-" + currentdate;
       
     }
     showOff(){

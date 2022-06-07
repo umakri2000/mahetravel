@@ -62,6 +62,7 @@
           type="submit"
           class="btn btn-outline-dark"
           [disabled]="!admin.valid"
+          click()="package(this.admin.value)"
         >
           Register
         </button>

@@ -29,7 +29,6 @@ show:boolean=true;
     this.showOff();
   }
   showOff(){
-    console.log('hii')
     this.show=!this.show
     
   }

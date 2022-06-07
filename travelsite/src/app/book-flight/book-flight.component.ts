@@ -12,7 +12,7 @@ export class BookFlightComponent implements OnInit {
   value:boolean=true;
   search!:string;
   object:any=[];
-  flightdata:any;
+  flightData:any;
   
   constructor(private formbuilder:FormBuilder,private api:ApiserviceService) { }
 
@@ -29,7 +29,6 @@ export class BookFlightComponent implements OnInit {
   }
   // post the flight passanger data
   ticketFlight(Formvalue:NgForm){
-    console.log(Formvalue);
     this.api.bookFlight(Formvalue).subscribe((_data: any)=>{
       console.log(_data);
     })
@@ -39,11 +38,10 @@ export class BookFlightComponent implements OnInit {
   // view the passanger data
   viewFlightstatus(_Formvalue:any) {
     this.api.viewFlights().subscribe(data=>{
-      console.log(data);
       console.log('Data was fetching');
-      this.flightdata = data;
-      this.flightdata=this.flightdata.docs;
-      for(const i of this.flightdata){
+      this.flightData = data;
+      this.flightData=this.flightData.docs;
+      for(const i of this.flightData){
             this.object.push(i);
       }
     

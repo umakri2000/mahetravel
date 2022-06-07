@@ -6,8 +6,17 @@
         <div class="card-body">
             <form [formGroup]="loginform">
                 <div class="form-group">
-                    <label for="email" class="text-dark">Username :</label>
-                    <input type="email" id="email" class="form-control" placeholder="Enter Username"
+                    <label for="NAME" class="text-dark">Username :</label>
+                    <input type="text" id="name" class="form-control" placeholder="Enter Username"
+                        formControlName="first_name">
+                    <span class="text-danger"
+                        *ngIf="loginform.controls['first_name'].touched &&loginform.hasError('required','first_name')">*
+                        Name
+                        is required!!</span>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="text-dark">MAIL :</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter Mail"
                         formControlName="email">
                     <span class="text-danger"
                         *ngIf="loginform.controls['email'].touched && loginform.hasError('required','email')">*

@@ -2,7 +2,7 @@
 .home_gif img{
     width:100vw;
     height: 100vh;
-    margin-top: -10px;
+    margin-top: -25px;
     /* background-size: cover; */
     position: relative;
 
@@ -95,6 +95,7 @@ height: 64vh;
   .heading{
       text-align: center;
       margin-top:5px;
+      color:red;
   }
  .img{
       width:102%;

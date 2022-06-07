@@ -3,7 +3,7 @@
       <img src="../../images/Kerala__banner.jpg" alt="homeimg">
     </div>
     <div class="heading">
-     <h2 style="color:red">PACKAGES</h2> 
+     <h2>PACKAGES</h2> 
     </div>
     <div class="grid-container">
       <div class="card"  >
@@ -11,7 +11,7 @@
         <div class="card-body">
           <h3 class="card-text" id="tourGoa" >GOA</h3>
           <p>PACKAGE :₹10000/</p>
-          <button type="button" id="button1" class="btn btn-success" (click)="goToPage('tourgoa')">BOOK-PACKAGE</button>
+          <button type="button" *ngIf="this.api.loginshow" id="button1" class="btn btn-success" (click)="goToPage('tourgoa')">BOOK-PACKAGE</button>
         </div>
       </div>
       <div class="card" >
@@ -19,7 +19,7 @@
         <div class="card-body">
           <h3 class="card-text">MUNAR</h3>
           <p>PACKAGE : ₹8000/</p>
-          <button type="button" class="btn btn-success" id="button2"(click)="goToPage1('tourmunnar')">BOOK-PACKAGE</button>
+          <button type="button" *ngIf="this.api.loginshow" class="btn btn-success" id="button2"(click)="goToPage1('tourmunnar')">BOOK-PACKAGE</button>
         </div>
       </div>
       <div class="card">
@@ -27,7 +27,7 @@
         <div class="card-body">
           <h3 class="card-text">MALDIVES</h3>
           <p>PACKAGE : ₹90000/</p>
-          <button type="button" class="btn btn-success"id="button3" (click)="goToPage2('maldives')">BOOK-PACKAGE</button>
+          <button type="button" *ngIf="this.api.loginshow" class="btn btn-success"id="button3" (click)="goToPage2('maldives')">BOOK-PACKAGE</button>
   
   
   
@@ -38,7 +38,7 @@
         <div class="card-body">
           <h3 class="card-text">DARJEELING</h3>
           <p>PACKAGE : ₹3000/</p>
-          <button type="button" class="btn btn-success" id="button4" (click)="goToPage3('tourdarjeeling')">BOOK-PACKAGE</button>
+          <button type="button" *ngIf="this.api.loginshow" class="btn btn-success" id="button4" (click)="goToPage3('tourdarjeeling')">BOOK-PACKAGE</button>
   
   
   
@@ -74,7 +74,7 @@
          <img src="../../images/hotel2.webp" class="hotelimg"alt="hotel2">
         <h3>CORNER RESORT
         </h3>
-        <button type="button" class="btn btn-success" id="buttonhotel" (click)="goToPageHotel('hotel')">BOOK-PACKAGE</button>
+        <button type="button" *ngIf="this.api.loginshow" class="btn btn-success" id="buttonhotel" (click)="goToPageHotel('hotel')">BOOK-PACKAGE</button>
   </div>
   </div>
   
@@ -83,7 +83,7 @@
          <img src="../../images/maldive_hotel1.webp"class="hotelimg" alt="hotel">
         <h3>METRO-HOTEL
         </h3>
-        <button type="button" class="btn btn-success" id="buttonhotel" (click)="goToPageHotel('hotel')">BOOK-PACKAGE</button>
+        <button type="button"  *ngIf="this.api.loginshow" class="btn btn-success" id="buttonhotel" (click)="goToPageHotel('hotel')">BOOK-PACKAGE</button>
   </div>
   </div>
   
@@ -92,7 +92,7 @@
          <img src="../../images/mooanr hotel1.jpg" class="hotelimg"alt="hotel" >
         <h3>VIEW-POINT RESORT
         </h3>
-        <button type="button" class="btn btn-success" id="buttonhotel" (click)="goToPageHotel('hotel')">BOOK-PACKAGE</button>
+        <button type="button" class="btn btn-success" *ngIf="this.api.loginshow" id="buttonhotel" (click)="goToPageHotel('hotel')">BOOK-PACKAGE</button>
   
         
   </div>
@@ -102,7 +102,7 @@
        <img src="../../images/metropolitican spa.webp"class="hotelimg" alt="mterohotel">
       <h3>MAHE-RESORT
       </h3>
-      <button type="button" class="btn btn-success" id="buttonhotel" (click)="goToPageHotel('hotel')">BOOK-PACKAGE</button>
+      <button type="button" class="btn btn-success" *ngIf="this.api.loginshow" id="buttonhotel" (click)="goToPageHotel('hotel')">BOOK-PACKAGE</button>
   
       
   </div>

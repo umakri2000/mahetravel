@@ -26,7 +26,6 @@ export class AdminComponent implements OnInit {
   }
   // to post the package form
 package(Formvalue:any){
-  console.log(Formvalue);
   this.api.adminPackage(Formvalue).subscribe((data)=>{
     console.log(data);
   })

@@ -21,18 +21,13 @@ constructor(private api:ApiserviceService,private router:Router) { }
   
 viewPackage(){
   this.api.packageOffer().subscribe(data=>{
-    console.log(data);
-    console.log('Data was fetching');
     this.packageData=data;
     this.packageData=this.packageData.data.docs;
-    console.log(this.packageData);
     for(const i of this.packageData){
-          console.log(i);
           this.object.push(i);
-          console.log('details of the traveller was successfully added');
-    }
+         
   
-  })
+  }})
 }
  goToPage7(place:string){
    this.router.navigate([`${place}`])

@@ -18,3 +18,10 @@ form{
     margin-left: 130px;
     font-size: 21px;
 }
+tr:nth-child(odd) {
+    background-color: dodgerblue;
+    color:white; 
+}th{
+    color:black;
+    background-color:white;
+}

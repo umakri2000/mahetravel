@@ -1,7 +1,8 @@
 #inputplace{
-    width:38vw;
+    width:52vw;
     height:30px;
     border-color: aqua;
+    font-size: medium;
 }
 .container mt-5{
     position:relative;

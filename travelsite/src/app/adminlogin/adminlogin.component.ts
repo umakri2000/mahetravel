@@ -11,7 +11,7 @@ import { ApiserviceService } from '../apiservice.service';
 export class AdminloginComponent implements OnInit {
 packageform!:FormGroup;
 object:any=[];
-admindata:any;
+adminData:any;
   constructor(private formbuilder:FormBuilder, private api:ApiserviceService,private router:Router ) { }
 
   ngOnInit(): void {
@@ -39,9 +39,9 @@ for (const iterator of this.object) {
     this.api.adminLoginDb().subscribe(data=>{
       console.log(data);
       
-      this.admindata=data;
-      this.admindata=this.admindata.data.docs;
-      for(const i of this.admindata){
+      this.adminData=data;
+      this.adminData=this.adminData.data.docs;
+      for(const i of this.adminData){
             this.object.push(i);
       }
     })

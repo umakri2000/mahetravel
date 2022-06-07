@@ -23,6 +23,7 @@ loginform!:FormGroup;
   ngOnInit(): void {
     this.loginform=this.formbuilder.group(
       {
+        'first_name':['',Validators.required],
         'email':['',Validators.required],
          'password':['',Validators.required],
         _id:[''],
@@ -48,6 +49,8 @@ loginform!:FormGroup;
           if(iterator.email == formvalue.email && iterator.password == formvalue.password ){
             this.api.showOff();
             console.log("login");
+      localStorage.setItem("formvalue",JSON.stringify(this.loginform.value))
+            
             // alert('success')
             this.router.navigate(['/register']);
           }

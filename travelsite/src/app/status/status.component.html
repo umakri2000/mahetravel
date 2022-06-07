@@ -1,5 +1,11 @@
 <div class="container">
     <h2>TRAVEL.COM</h2>
+    <p>7 Brilliant reasons travel should be your one-stop-shop! Book Flights,
+        Hotels, Trains, Buses, Cruise and Holiday Packages On travel.com, you can
+        tailor your trip from end-to-end by scouring suitable flights and making
+        your flight booking before proceeding with your hotel bookings .
+        travel.com</p>
+        <em class="fa fa-ticket" style="font-size:36px"></em>
   <div class="name">
     <span class="label">NAME:</span>
     <span>{{ name }}</span>
@@ -17,10 +23,18 @@
     <span class="label">DATE:</span>
     <span>{{ date }}</span>
   </div>
+  <div class="MobileNumber">
+    <span class="label">MobileNumber:</span>
+    <span>{{ mobileNumber }}</span>
+  </div>
+  <div class="aadhar">
+    <span class="label">Id number:</span>
+    <span>{{ aadhar }}</span>
+  </div>
 
   <div class="Confirmed">
     <span class="label">Status:</span>
     <span>Confirmed</span>
   </div>
-  <button type="btn-btn success"(click)="print()">print</button>
+  <button type="button" class="btn btn-success"(click)="print()">print</button>
 </div>

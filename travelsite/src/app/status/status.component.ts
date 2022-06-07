@@ -10,6 +10,7 @@ email:any;
 name:any;
 place:any;
 date:any;
+aadhar:any;
 mobileNumber:any;
   constructor() { 
     // to overcome sonar code-smell
@@ -22,8 +23,8 @@ mobileNumber:any;
     this.name=parsed.first_name;
     this.place=parsed.place;
     this.date=parsed.date;
-    this.mobileNumber=parsed.mobileNumber
-  
+    this.mobileNumber=parsed.mobileNumber;
+  this.aadhar=parsed.aadhar
   }
 print(){
   window.print();
