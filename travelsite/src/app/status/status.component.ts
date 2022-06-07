@@ -13,6 +13,7 @@ place:any;
 date:any;
 aadhar:any;
 mobileNumber:any;
+hotel:any;
 // pdf:any;
   constructor() { 
     // to overcome sonar code-smell
@@ -27,6 +28,7 @@ mobileNumber:any;
     this.date=parsed.date;
     this.mobileNumber=parsed.mobileNumber;
   this.aadhar=parsed.aadhar
+  this.hotel=parsed.hotel
   }
 print(){
   window.print();

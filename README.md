@@ -14,10 +14,12 @@ Travel Booking Site:
 
 
 # Project structure
-
-   HOME   USERLOGIN--> BOOK TICKET FOR TRIP    ADMIN -->ADD AND DELETE PACKAGES
-               --> BOOK FOR LIMITED HOTEL        --> SEE THE PASSENGER    
-               --> BOOK FOR FLIGHT TICKETS       ---> SEE THE HOTEL-BOOKIG LIST
+HOME-->USER LOGIN--> TICKET BOOKING FOR TRIP---> USER CAN DOWNLOAD THE TRIP TICKET
+                 --> BOOK FOR HOTEL
+                 --> BOOK FOR  FLIGHT
+       ADMIN LOGIN --> ADD PACKAGES
+                   --> DELETE PACKAGES
+                   --> SEE THE PEOPLE BOOKS FOR HOTEL AND TRIPS
                          
               
 
