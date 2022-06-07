@@ -14,8 +14,7 @@ app.use(
 app.post("/travel", (request, response) => {
   console.log(request);
   const object = {
-    
-    first_name: request.body.first_name,
+    firstName: request.body.firstName,
     mobileNumber:request.body.mobileNumber,
     email: request.body.email,
     date:request.body.date,
@@ -48,7 +47,7 @@ app.post("/travel", (request, response) => {
       console.log(request);
       const object = {
         
-        first_name:request.body.first_name,
+        firstNname:request.body.firstNname,
         email: request.body.email,
         password:request.body.password,
         type:'signup',
@@ -64,7 +63,7 @@ app.post("/travel", (request, response) => {
             message:'OOPS',
             data:_res,
           }
-          if (res) {
+          if (_res) {
             response.send(teststatus);
           } else {
             response.send(err);
@@ -148,8 +147,8 @@ app.post("/travel", (request, response) => {
           })
         console.log("the traveller data added");
        // to display the hotel status  
-  app.get("/hotelstatus", (_request, response) => {
-    const data = {
+      app.get("/hotelstatus", (_request, response) => {
+      const data = {
       selector:{
         type:'hotel'
       }
@@ -234,7 +233,7 @@ dbconnection.post_travel(object,'projecttravel').then(_res=>{
     console.log('admin get data')
     const data = {
       selector:{
-        type:'adminloign'
+        type:'adminlogin'
       }
     }
     dbconnection.get(data,"projecttravel").then((_res) => {

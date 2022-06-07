@@ -32,7 +32,7 @@ export class RegisterComponent implements OnInit {
     this.bookup = this.formbuilder.group(
       {
         
-        'first_name':['',Validators.required],
+        'firstName':['',Validators.required],
         'date':['',Validators.required],
         'mobileNumber':['',Validators.required],
         'email':['',Validators.required],

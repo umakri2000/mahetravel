@@ -12,7 +12,7 @@ signupForm!:FormGroup;
 
   ngOnInit(): void {
     this.signupForm=this.formbuilder.group(
-      {'first_name':['',Validators.required],
+      {'firstName':['',Validators.required],
         'email':['',Validators.required],
          'password':['',Validators.required]
       }

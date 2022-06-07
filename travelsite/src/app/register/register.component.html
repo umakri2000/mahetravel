@@ -33,7 +33,7 @@
             <label for="first_Name" class="text-dark">Name :</label>
             <input
               type="text"
-              formControlName="first_name"
+              formControlName="firstName"
               class="form-control"
               placeholder="Enter First Name"
               maxlength="15"
@@ -41,8 +41,8 @@
             <span
               class="text-danger"
               *ngIf="
-                bookup.controls['first_name'].touched &&
-                bookup.hasError('required', 'first_name')
+                bookup.controls['firstName'].touched &&
+                bookup.hasError('required', 'firstName')
               "
               >*Name is required
             </span>
