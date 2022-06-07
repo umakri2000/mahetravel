@@ -23,6 +23,7 @@
 #inputplace{
   height: 20px;
   font-size: medium;
+  width:100%;
 }
   div.container.mt-5{
     top: -300px;
@@ -30,9 +31,6 @@
   position: relative;
   left: 146px;
   }
-#inputplace{
-  width:100%;
-}
 .container{
   width:500px;
   border:2px solid gray;
