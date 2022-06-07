@@ -38,13 +38,9 @@ export class RegisterComponent implements OnInit {
         'email':['',Validators.required],
         'place':['',Validators.required],
         'aadhar':['',Validators.required],
-        // 'file':['',Validators.required],
       }
     )
   }
-
-
-
     ticketBookForm(Formvalue:any){
     
       this.api.bookData(Formvalue).subscribe((data: any)=>{

@@ -1,5 +1,4 @@
-# mahetravel
-# Title
+# Title : mahetravel
 
 TRAVEL TICKET BOOKING SITE
 
@@ -16,12 +15,7 @@ Travel Booking Site:
 
 # Project structure
 
-    HOME---> - LOGIN-->TICKET BOOKING-->Book for trips
-              - Admin--> -view hotel
-                          -add packages and delete packages
-                          -view passanger booking
-               - Book for hotels and flights
-               -packages                 
+   HOME   LOGIN                  
               
 
 # How to use the project
