@@ -4,9 +4,9 @@
       <h2>Why book with travel.com?</h2>
       <p>
         7 Brilliant reasons travel should be your one-stop-shop! Book Flights,
-        Hotels, Trains, Buses, Cruise and Holiday Packages On travel.com, you can
-        tailor your trip from end-to-end by scouring suitable flights and making
-        your flight booking before proceeding with your hotel bookings .
+        Hotels, Trains, Buses, Cruise and Holiday Packages On travel.com, you
+        can tailor your trip from end-to-end by scouring suitable flights and
+        making your flight booking before proceeding with your hotel bookings .
         travel.com vast hotel repository will see you through this process
         seamlessly. Any intervening journey can be conveniently planned by
         searching up relevant train connectivity and making an IRCTC ticket
@@ -16,11 +16,15 @@
     </div>
 
     <div class="button">
-      <button class="btn btn-primary" *ngIf="formShow" (click)="showOff()">click to check status</button>
+      <button class="btn btn-primary" *ngIf="formShow" (click)="showOff()">
+        click to check status
+      </button>
     </div>
     <div>
-    <button class="btn btn-primary"*ngIf="show"(click)="showOff()">BACK TO BOOKING FORM</button>
-  </div>
+      <button class="btn btn-primary" *ngIf="show" (click)="showOff()">
+        BACK TO BOOKING FORM
+      </button>
+    </div>
 
     <div class="container mt-5" *ngIf="formShow">
       <div class="card mx-auto">
@@ -71,7 +75,8 @@
                 type="email"
                 formControlName="email"
                 class="form-control"
-                placeholder="Enter Your Email "pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+                placeholder="Enter Your Email "
+                pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
               />
               <span
                 class="text-danger"
@@ -81,10 +86,14 @@
                 "
                 >*Email is required
               </span>
-              <span class="text-danger"
-                        *ngIf="bookup.controls['email'].touched && bookup.hasError('pattern','email')">*Not Valid Email
-                    </span>
-              
+              <span
+                class="text-danger"
+                *ngIf="
+                  bookup.controls['email'].touched &&
+                  bookup.hasError('pattern', 'email')
+                "
+                >*Not Valid Email
+              </span>
             </div>
             <div class="form-group">
               <label for="aadhar" class="text-dark">Aadhar Number :</label>
@@ -152,10 +161,9 @@
                 id="inputplace"
               >
                 <option *ngFor="let tour of place">{{ tour.place }}</option>
-        
               </select>
             </div>
-           
+
             <div class="button text-center">
               <button
                 type="submit"
@@ -173,7 +181,7 @@
     <div class="input-group" *ngIf="show">
       <div class="form-outline">
         <input
-        id="search"
+          id="search"
           type="search"
           [(ngModel)]="search"
           class="form-control mt-5 search"
@@ -189,8 +197,10 @@
       </div>
       <div class="travel-booking">
         <div *ngIf="show">
-          <table class="table bg-light" >
-            <caption>booking</caption>
+          <table class="table bg-light">
+            <caption>
+              booking
+            </caption>
             <thead class="text-dark">
               <tr>
                 <th scope="col">Name</th>
