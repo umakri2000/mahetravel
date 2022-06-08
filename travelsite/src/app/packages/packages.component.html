@@ -1,29 +1,44 @@
 <div class="head-content">
-    <span class="form-outline">
-        <input type="search" [(ngModel)]="search" class="form-control mt-5 search" placeholder="search trips" /></span>
-    </div>
-    <span><em class="fa fa-search" aria-hidden="true"(click)="viewPackage()"></em></span>
+  <span class="form-outline">
+    <input
+      type="search"
+      [(ngModel)]="search"
+      class="form-control mt-5 search"
+      placeholder="search trips"
+  /></span>
+</div>
+<span
+  ><em class="fa fa-search" aria-hidden="true" (click)="viewPackage()"></em
+></span>
 
 <div class="input-group">
-<table class="table dark">
-    <caption>PACKAGE-TABLE</caption>
+  <table class="table dark">
+    <caption>
+      PACKAGE-TABLE
+    </caption>
     <thead class="text-dark">
-        <tr>
-            <th scope="col">PLACE</th>
-            <th scope="col">PRICE</th>
-            <th scope="col">PACKAGE</th>
-            <th scope="col">BOOK-Now</th>
-            
-
-
-        </tr>
+      <tr>
+        <th scope="col">PLACE</th>
+        <th scope="col">PRICE</th>
+        <th scope="col">PACKAGE</th>
+        <th scope="col">BOOK-Now</th>
+      </tr>
     </thead>
     <tbody class="text-light">
-        <tr *ngFor="let obj of object|filter:search">
-            <td>{{obj.place}}</td>
-            <td>{{obj.price}}</td>
-            <td>{{obj.package}}</td>
-        <td><button type="submit" class="btn btn-primary"(click)="goToPage7('register')">BOOK</button></td>
-        </tr>
+      <tr *ngFor="let obj of object | filter: search">
+        <td>{{ obj.place }}</td>
+        <td>{{ obj.price }}</td>
+        <td>{{ obj.package }}</td>
+        <td>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            (click)="goToPage7('register')"
+          >
+            BOOK
+          </button>
+        </td>
+      </tr>
     </tbody>
-</table>
+  </table>
+</div>

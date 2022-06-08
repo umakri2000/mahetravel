@@ -1,31 +1,38 @@
 <div class="input-group">
-    <div class="form-outline">
-        <input type="search" [(ngModel)]="search" class="form-control mt-5 search" placeholder="Enter Your Data" />
-        <button type="submit" class="btn btn-primary" (click)="hotelList()">VIEWpackage</button> 
-    </div>
-    </div>
-    <table class="table bg-light ">
-        <caption>Hotel</caption>
-        <thead class="text-dark">
-            <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">HOTEL</th>
-                <th scope="col">food</th>
-                <th scope="col">Date</th>
-                <th scope="col">STATUS</th>
-
-            </tr>
-        </thead>
-        <tbody class="text-dark">
-            <tr *ngFor="let obj of object| filter:search">
-                <td>{{obj.name}}</td>
-                <td>{{obj.email}}</td>
-                <td>{{obj.hotel}}</td>
-                <td>{{obj.food}}</td>
-                <td>{{obj.date}}</td>
-                <td>booked</td>
-            </tr>
-        </tbody>
-    </table>
-    
+  <div class="form-outline">
+    <input
+      type="search"
+      [(ngModel)]="search"
+      class="form-control mt-5 search"
+      placeholder="Enter Your Data"
+    />
+    <button type="submit" class="btn btn-primary" (click)="hotelList()">
+      VIEWpackage
+    </button>
+  </div>
+</div>
+<table class="table bg-light">
+  <caption>
+    Hotel
+  </caption>
+  <thead class="text-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">HOTEL</th>
+      <th scope="col">food</th>
+      <th scope="col">Date</th>
+      <th scope="col">STATUS</th>
+    </tr>
+  </thead>
+  <tbody class="text-dark">
+    <tr *ngFor="let obj of object | filter: search">
+      <td>{{ obj.name }}</td>
+      <td>{{ obj.email }}</td>
+      <td>{{ obj.hotel }}</td>
+      <td>{{ obj.food }}</td>
+      <td>{{ obj.date }}</td>
+      <td>booked</td>
+    </tr>
+  </tbody>
+</table>

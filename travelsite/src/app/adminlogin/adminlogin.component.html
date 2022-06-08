@@ -1,58 +1,57 @@
 <div class="container mt-5">
-    <div class="card mx-auto">
-      <div class="card-header text-center">
-        <h1 class="text-light">ADMINLOGIN-PAGE</h1>
-      </div>
-      <div class="card-body">
-        <form [formGroup]="packageform">
-          <div class="form-group">
-            <label for="text" class="text-dark">Adminname :</label>
-            <input
-              type="text"
-              id="adminid"
-              class="form-control"
-              placeholder="Enter the  adminid"
-              formControlName="username"
-            />
-            <span
-              class="text-danger"
-              *ngIf="
-                packageform.controls['username'].touched &&
-                packageform.hasError('required', 'username')
-              "
-              >* Name is required!!</span
-            >
-          </div>
-          <div class="form-group">
-            <label for="Password1" class="text-dark">Password :</label>
-            <input
-              type="password"
-              id="Password1"
-              class="form-control"
-              placeholder="Password"
-              formControlName="password"
-            />
-            <span
-              class="text-danger"
-              *ngIf="
-                packageform.controls['password'].touched &&
-                packageform.hasError('required', 'password')
-              "
-              >*Password is required!!</span
-            >
-          </div>
-          <div>
-            <button
-              type="submit"
-              class="btn btn-primary"
-              [disabled]="!packageform.valid"
-              (click)="adminLogin(this.packageform.value)"
-            >
-              Log in
-            </button>
-          </div>
-        </form>
-      </div>
+  <div class="card mx-auto">
+    <div class="card-header text-center">
+      <h1 class="text-light">ADMINLOGIN-PAGE</h1>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="packageform">
+        <div class="form-group">
+          <label for="text" class="text-dark">Adminname :</label>
+          <input
+            type="text"
+            id="adminid"
+            class="form-control"
+            placeholder="Enter the  adminid"
+            formControlName="username"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              packageform.controls['username'].touched &&
+              packageform.hasError('required', 'username')
+            "
+            >* Name is required!!</span
+          >
+        </div>
+        <div class="form-group">
+          <label for="Password1" class="text-dark">Password :</label>
+          <input
+            type="password"
+            id="Password1"
+            class="form-control"
+            placeholder="Password"
+            formControlName="password"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              packageform.controls['password'].touched &&
+              packageform.hasError('required', 'password')
+            "
+            >*Password is required!!</span
+          >
+        </div>
+        <div>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="!packageform.valid"
+            (click)="adminLogin(this.packageform.value)"
+          >
+            Log in
+          </button>
+        </div>
+      </form>
     </div>
   </div>
-  
+</div>

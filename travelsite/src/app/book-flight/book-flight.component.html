@@ -1,104 +1,161 @@
-   
 <div class="container mt-5" *ngIf="value">
-    <div class="input-group">
-    
-        <div class="form-outline">
-            <input type="search" [(ngModel)]="search" class="form-control mt-5 search" placeholder="Enter Your Data" />
-            <button type="submit" class="btn btn-primary" (click)="viewFlightstatus(this.bookFlight.value)">view status</button>
+  <div class="input-group">
+    <div class="form-outline">
+      <input
+        type="search"
+        [(ngModel)]="search"
+        class="form-control mt-5 search"
+        placeholder="Enter Your Data"
+      />
+      <button
+        type="submit"
+        class="btn btn-primary"
+        (click)="viewFlightstatus(this.bookFlight.value)"
+      >
+        view status
+      </button>
     </div>
-    <div class="card  mx-auto">
-        <div class="card-header text-center">
-            <h1 class="text-dark">BOOK-FLIGHT</h1>
-        </div>
-        <div class="card-body">
-            <form [formGroup]="bookFlight">
-                    <label for="first_Name" class="text-dark">Name :</label>
-                    <input type="text" formControlName="name" class="form-control" placeholder="Enter the Name" maxlenght="15">
-                    <span class="text-danger"
-                        *ngIf="bookFlight.controls['name'].touched && bookFlight.hasError('required','name')">*Name
-                         is required </span>
-                
-                <div class="form-group">
-                    <label for="mobileNumber" class="text-dark">MobileNumber:</label>
-                    <input type="tel" formControlName="mobileNumber" class="form-control" placeholder="Enter mobile number" minlength="10" maxlength="10">
-                    <span class="text-danger"
-                        *ngIf="bookFlight.controls['mobileNumber'].touched && bookFlight.hasError('required','mobileNumber')">*mobile
-                        Number is required </span>
-                </div>
-                 <div class="form-group">
-                    <label for="DATE" class="text-dark">DATE</label>
-                    <input type="date" formControlName="date" class="form-control" placeholder="Enter  the date">
-                    <span class="text-danger"
-                        *ngIf="bookFlight.controls['date'].touched && bookFlight.hasError('required','date')">*date
-                     is required </span>
-                </div>
-                <div class="form-group">
-                    <label for="email" class="text-dark">Email :</label>
-                    <input type="email" formControlName="email" class="form-control" placeholder="Enter Your Email " pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$">
-                    <span class="text-danger"
-                        *ngIf="bookFlight.controls['email'].touched && bookFlight.hasError('pattern','email')">*Email is
-                        required </span>
-                </div>
-                <div class="form-group">
-                    <label for="flight" class="text-dark" >FLIGHT :</label>
-                    <br>
-                        <select name="hotel" formControlName="flight"
-                        placeholder="enter the hotel" id="inputplace">
-                            <option value="Flight-7680E">Flight-7680E</option>
-                            <option value="Flight-3001M">Flight-3001M</option>
-                            <option value="Flight-09876P">Flight-09876P</option>
-                            <option value="Flight-zM">Flight-zM</option>
-                            <option value="Flight-79044MA">79044MA</option>
-                            <option value="Flight-6654U">Flight-6654U</option>
-                            <option value="Flight-zM">Flight-1690W</option>
-                          </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="seat" class="text-dark" >SEAT category :</label>
-                                <br>
-                                    <select name="seatClass" formControlName="seat"  id="inputplace">
-                                    placeholder="choose the seat type" id="inputplace">
-                                        <option value="bussiness class" selected>BUSSINESS CLASS</option>
-                                        <option value="economical class">ECONOMICAL CLASS</option>
-                                      </select>
-                                
-                            </div>
-                <div class="button text-center">
-                    <button type="submit" class="btn btn-outline-dark px-4 py-2"[disabled]="!bookFlight.valid" (click)="ticketFlight(this.bookFlight.value)">BOOK</button>
+    <div class="card mx-auto">
+      <div class="card-header text-center">
+        <h1 class="text-dark">BOOK-FLIGHT</h1>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="bookFlight">
+          <label for="first_Name" class="text-dark">Name :</label>
+          <input
+            type="text"
+            formControlName="name"
+            class="form-control"
+            placeholder="Enter the Name"
+            maxlenght="15"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              bookFlight.controls['name'].touched &&
+              bookFlight.hasError('required', 'name')
+            "
+            >*Name is required
+          </span>
 
-
-                </div>
-            </form>
-           
-        </div>
+          <div class="form-group">
+            <label for="mobileNumber" class="text-dark">MobileNumber:</label>
+            <input
+              type="tel"
+              formControlName="mobileNumber"
+              class="form-control"
+              placeholder="Enter mobile number"
+              minlength="10"
+              maxlength="10"
+            />
+            <span
+              class="text-danger"
+              *ngIf="
+                bookFlight.controls['mobileNumber'].touched &&
+                bookFlight.hasError('required', 'mobileNumber')
+              "
+              >*mobile Number is required
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="DATE" class="text-dark">DATE</label>
+            <input
+              type="date"
+              formControlName="date"
+              class="form-control"
+              placeholder="Enter  the date"
+            />
+            <span
+              class="text-danger"
+              *ngIf="
+                bookFlight.controls['date'].touched &&
+                bookFlight.hasError('required', 'date')
+              "
+              >*date is required
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="email" class="text-dark">Email :</label>
+            <input
+              type="email"
+              formControlName="email"
+              class="form-control"
+              placeholder="Enter Your Email "
+              pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+            />
+            <span
+              class="text-danger"
+              *ngIf="
+                bookFlight.controls['email'].touched &&
+                bookFlight.hasError('pattern', 'email')
+              "
+              >*Email is required
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="flight" class="text-dark">FLIGHT :</label>
+            <br />
+            <select
+              name="hotel"
+              formControlName="flight"
+              placeholder="enter the hotel"
+              id="inputplace"
+            >
+              <option value="Flight-7680E">Flight-7680E</option>
+              <option value="Flight-3001M">Flight-3001M</option>
+              <option value="Flight-09876P">Flight-09876P</option>
+              <option value="Flight-zM">Flight-zM</option>
+              <option value="Flight-79044MA">79044MA</option>
+              <option value="Flight-6654U">Flight-6654U</option>
+              <option value="Flight-zM">Flight-1690W</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="seat" class="text-dark">SEAT category :</label>
+            <br />
+            <select name="seatClass" formControlName="seat" id="inputplace">
+              placeholder="choose the seat type" id="inputplace">
+              <option value="bussiness class" selected>BUSSINESS CLASS</option>
+              <option value="economical class">ECONOMICAL CLASS</option>
+            </select>
+          </div>
+          <div class="button text-center">
+            <button
+              type="submit"
+              class="btn btn-outline-dark px-4 py-2"
+              [disabled]="!bookFlight.valid"
+              (click)="ticketFlight(this.bookFlight.value)"
+            >
+              BOOK
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-   <div>
-        <table class="table bg-dark" style="padding:10px">
-                   <caption>flight-table</caption>
-            <thead class="text-light">
-                <tr>
-                    <th scope="col">NAME</th>
-                    <th scope="col">mobileNumber</th>
-                    <th scope="col">EMAIL</th>
-                    <th scope="col">flight</th>
-                    <th scope="col">status</th>
-                </tr>
-            </thead>
-            <tbody class="text-light" style="color:brown" >
-                <tr *ngFor="let obj of object|filter:search">
-                    <td>{{obj.name}}</td>
-                    <td>{{obj.mobileNumber}}</td>
-                    <td>{{obj.email}}</td>
-                    <td>{{obj.fligth}}</td>
-                    <td>BOOKED</td>
-                    
-
-                </tr>
-            </tbody>
-        </table>
+    <div>
+      <table class="table bg-dark" style="padding: 10px">
+        <caption>
+          flight-table
+        </caption>
+        <thead class="text-light">
+          <tr>
+            <th scope="col">NAME</th>
+            <th scope="col">mobileNumber</th>
+            <th scope="col">EMAIL</th>
+            <th scope="col">flight</th>
+            <th scope="col">status</th>
+          </tr>
+        </thead>
+        <tbody class="text-light" style="color: brown">
+          <tr *ngFor="let obj of object | filter: search">
+            <td>{{ obj.name }}</td>
+            <td>{{ obj.mobileNumber }}</td>
+            <td>{{ obj.email }}</td>
+            <td>{{ obj.fligth }}</td>
+            <td>BOOKED</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+  </div>
 </div>
-</div>
-
-
-    

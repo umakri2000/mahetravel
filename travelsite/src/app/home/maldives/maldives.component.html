@@ -1,17 +1,17 @@
 <div class="grid-container">
   <div class="card">
     <img
-    class="card-img-top"
-    src="../../images/maldives2Amaya Kuda Aerial View3.webp"
-    alt="Card image cap"
-  />
+      class="card-img-top"
+      src="../../images/maldives2Amaya Kuda Aerial View3.webp"
+      alt="Card image cap"
+    />
 
-  <div class="card-body">
-    <p class="card-text" id="tourmaldives">maldives</p>
-    <h5>PACKAGE :₹30000/day</h5>
-    <h5>DAYS: 4DAYS/5NIGHTS</h5>
-    <h5>PRICE:120000<span style="color: red">(GST+23%)</span></h5>
-  </div>
+    <div class="card-body">
+      <p class="card-text" id="tourmaldives">maldives</p>
+      <h5>PACKAGE :₹30000/day</h5>
+      <h5>DAYS: 4DAYS/5NIGHTS</h5>
+      <h5>PRICE:120000<span style="color: red">(GST+23%)</span></h5>
+    </div>
   </div>
 </div>
 
@@ -87,11 +87,17 @@
           type="email"
           formControlName="email"
           class="form-control"
-          placeholder="Enter Your Email " pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+          placeholder="Enter Your Email "
+          pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
         />
-        <span class="text-danger"
-                        *ngIf="bookup.controls['email'].touched && bookup.hasError('pattern','email')">*Not Valid Email
-                    </span>
+        <span
+          class="text-danger"
+          *ngIf="
+            bookup.controls['email'].touched &&
+            bookup.hasError('pattern', 'email')
+          "
+          >*Not Valid Email
+        </span>
       </div>
       <div class="form-group">
         <label for="aadhar" class="text-dark">Aadhar Number :</label>
@@ -115,9 +121,7 @@
         <span class="text-danger" *ngIf="bookup.hasError('pattern', 'aadhar')"
           >*Aadhar no have must 12 numbers
         </span>
-        <span
-          class="text-danger"
-          *ngIf="bookup.hasError('maxlength', 'aadhar')"
+        <span class="text-danger" *ngIf="bookup.hasError('maxlength', 'aadhar')"
           >*no have must 12 numbers
         </span>
       </div>
@@ -145,8 +149,7 @@
         <span
           class="text-danger"
           *ngIf="
-            bookup.controls['file'].dirty &&
-            bookup.hasError('required', 'file')
+            bookup.controls['file'].dirty && bookup.hasError('required', 'file')
           "
           >*id proof is required
         </span>
@@ -159,8 +162,7 @@
         >
           Register
         </button>
-
       </div>
     </form>
   </div>
-  </div>
+</div>

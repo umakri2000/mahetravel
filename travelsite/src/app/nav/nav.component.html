@@ -1,24 +1,52 @@
 <div *ngIf="this.api.show">
-    <ul>
+  <ul>
     <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-   <li><a routerLink="/adminlogin" routerLinkActive="active">Admin</a></li>
-   <li><a routerLink="/login" routerLinkActive="active"*ngIf="this.api.show">Login</a></li>
-    <li><a routerLink='packages'routerLinkActive='active'>Packages</a></li>
-    <li><a routerLink="/register"routerLinkActive="active"*ngIf="this.api.loginshow">Ticket-booking</a></li>
-    <li><a routerLink="hotel"routerLinkActive="active"*ngIf="this.api.loginshow">Hotels</a></li>
-    <li><a routerLink="flights"routerLinkActive="active"*ngIf="this.api.loginshow">Flights</a></li>
-
+    <li><a routerLink="/adminlogin" routerLinkActive="active">Admin</a></li>
+    <li>
+      <a routerLink="/login" routerLinkActive="active" *ngIf="this.api.show"
+        >Login</a
+      >
+    </li>
+    <li><a routerLink="packages" routerLinkActive="active">Packages</a></li>
+    <li>
+      <a
+        routerLink="/register"
+        routerLinkActive="active"
+        *ngIf="this.api.loginshow"
+        >Ticket-booking</a
+      >
+    </li>
+    <li>
+      <a routerLink="hotel" routerLinkActive="active" *ngIf="this.api.loginshow"
+        >Hotels</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="flights"
+        routerLinkActive="active"
+        *ngIf="this.api.loginshow"
+        >Flights</a
+      >
+    </li>
   </ul>
 </div>
 <div *ngIf="this.api.loginshow">
   <ul>
-  <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-  <li><a routerLink="/register"routerLinkActive="active">Ticket-booking</a></li>
-  <li><a routerLink="hotel"routerLinkActive="active">Hotels</a></li>
-  <li><a routerLink="flights"routerLinkActive="active">Flights</a></li>
-  <li><a routerLink='packages'routerLinkActive='active'>Packages</a></li>
-  <li><a href="#" (click)="logOut()">logout</a></li>
-  <li><em class="fa fa-info-circle" routerLink="info" routerLinkActive="active"></em></li>
-
-</ul>
+    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+    <li>
+      <a routerLink="/register" routerLinkActive="active">Ticket-booking</a>
+    </li>
+    <li><a routerLink="hotel" routerLinkActive="active">Hotels</a></li>
+    <li><a routerLink="flights" routerLinkActive="active">Flights</a></li>
+    <li><a routerLink="packages" routerLinkActive="active">Packages</a></li>
+    <li><a href="#" (click)="logOut()">logout</a></li>
+    <li>
+      <em
+        class="fa fa-info-circle"
+        routerLink="info"
+        routerLinkActive="active"
+      ></em>
+    </li>
+  </ul>
 </div>

@@ -1,42 +1,78 @@
- <div class="container mt-5">
-    <div class="card mx-auto">
-        <div class="card-header text-center">
-            <h1 class="text-light">LOGIN-PAGE </h1>
-        </div>
-        <div class="card-body">
-            <form [formGroup]="loginform">
-                <div class="form-group">
-                    <label for="NAME" class="text-dark">Username :</label>
-                    <input type="text" id="name" class="form-control" placeholder="Enter Username"
-                        formControlName="firstName">
-                    <span class="text-danger"
-                        *ngIf="loginform.controls['firstName'].touched &&loginform.hasError('required','firstName')">*
-                        Name
-                        is required!!</span>
-                </div>
-                <div class="form-group">
-                    <label for="email" class="text-dark">MAIL :</label>
-                    <input type="email" id="email" class="form-control" placeholder="Enter Mail"
-                        formControlName="email">
-                    <span class="text-danger"
-                        *ngIf="loginform.controls['email'].touched && loginform.hasError('required','email')">*
-                        Name
-                        is required!!</span>
-                </div>
-                <div class="form-group">
-                    <label for="Password1" class="text-dark">Password :</label>
-                    <input type="password" id="Password1" class="form-control" placeholder="Password"
-                        formControlName="password">
-                     <span class="text-danger"
-                        *ngIf="loginform.controls['password'].touched && loginform.hasError('required','password')">*Password
-                        is required!!</span>
-                </div>
-                <div>
-                    <button type="submit" class="btn btn-primary "[disabled]="!loginform.valid" (click)="login(this.loginform.value)" >Log
-                        in</button>
-                    <p class="signup">Don't Have an account?<a routerLink="/signup">Sign Up</a></p>
-                </div>
-            </form>
-        </div>
+<div class="container mt-5">
+  <div class="card mx-auto">
+    <div class="card-header text-center">
+      <h1 class="text-light">LOGIN-PAGE</h1>
     </div>
-</div> 
+    <div class="card-body">
+      <form [formGroup]="loginform">
+        <div class="form-group">
+          <label for="NAME" class="text-dark">Username :</label>
+          <input
+            type="text"
+            id="name"
+            class="form-control"
+            placeholder="Enter Username"
+            formControlName="firstName"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              loginform.controls['firstName'].touched &&
+              loginform.hasError('required', 'firstName')
+            "
+            >* Name is required!!</span
+          >
+        </div>
+        <div class="form-group">
+          <label for="email" class="text-dark">MAIL :</label>
+          <input
+            type="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter Mail"
+            formControlName="email"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              loginform.controls['email'].touched &&
+              loginform.hasError('required', 'email')
+            "
+            >* Name is required!!</span
+          >
+        </div>
+        <div class="form-group">
+          <label for="Password1" class="text-dark">Password :</label>
+          <input
+            type="password"
+            id="Password1"
+            class="form-control"
+            placeholder="Password"
+            formControlName="password"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              loginform.controls['password'].touched &&
+              loginform.hasError('required', 'password')
+            "
+            >*Password is required!!</span
+          >
+        </div>
+        <div>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="!loginform.valid"
+            (click)="login(this.loginform.value)"
+          >
+            Log in
+          </button>
+          <p class="signup">
+            Don't Have an account?<a routerLink="/signup">Sign Up</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
