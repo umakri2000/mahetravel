@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 loginform!:FormGroup;
-  logindata:any
+  loginData:any
   object: any=[];
   myId:any;
   
@@ -23,7 +23,7 @@ loginform!:FormGroup;
   ngOnInit(): void {
     this.loginform=this.formbuilder.group(
       {
-        'first_name':['',Validators.required],
+        'firstName':['',Validators.required],
         'email':['',Validators.required],
          'password':['',Validators.required],
         _id:[''],
@@ -35,10 +35,10 @@ loginform!:FormGroup;
       console.log(formvalue);
       console.log("login start");
       this.api.getSignup().subscribe(data=>{
-        this.logindata=data;
-        this.logindata=this.logindata.data.docs;
-        console.log(this.logindata);
-        for(const i of this.logindata){
+        this.loginData=data;
+        this.loginData=this.loginData.data.docs;
+        console.log(this.loginData);
+        for(const i of this.loginData){
           console.log(i);
           this.object.push(i);    
         }

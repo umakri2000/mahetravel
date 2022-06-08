@@ -23,16 +23,13 @@ hotel:any;
     let local:any=localStorage.getItem("formvalue");
     let parsed=JSON.parse(local);
     this.email=parsed.email;
-    this.name=parsed.first_name;
+    this.name=parsed.firstName;
     this.place=parsed.place;
     this.date=parsed.date;
     this.mobileNumber=parsed.mobileNumber;
   this.aadhar=parsed.aadhar
   this.hotel=parsed.hotel
   }
-print(){
-  window.print();
-}
 defaultOptions = {
   jsPDF: {
     unit: 'px',
@@ -60,7 +57,7 @@ defaultOptions = {
 public openPdf(): void {
   let DATA: any = document.getElementById('print');
   html2canvas(DATA).then((canvas) => {
-    let fileWidth = 200;
+    let fileWidth = 208;
     let fileHeight = (canvas.height * fileWidth) / canvas.width;
     const FILEURI = canvas.toDataURL('image/png');
     let PDF = new jsPDF('p', 'mm', 'a4');

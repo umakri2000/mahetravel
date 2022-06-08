@@ -9,9 +9,8 @@ import { Router } from '@angular/router';
 export class InfoComponent implements OnInit {
 name:any;
 email:any;
-traveldata:any;
+travelData:any;
 object1:any=[];
-first_name:any;
 aadhar:any;
   constructor(private api:ApiserviceService,private router:Router) { }
 
@@ -20,7 +19,7 @@ aadhar:any;
     let local:any=localStorage.getItem("formvalue");
     let parsed=JSON.parse(local);
     this.email=parsed.email;
-    this.name=parsed.first_name;
+    this.name=parsed.firstName;
     console.log(this.name);
   }
 
@@ -31,10 +30,9 @@ displayDetails() {
   this.api.displayDetails().subscribe(data=>{  
     console.log(data)
     console.log(data)             
-    this.traveldata=data;
-    this.traveldata=this.traveldata.data.docs;
-    console.log(this.traveldata);
-    for(const i of this.traveldata){
+    this.travelData=data;
+    this.travelData=this.travelData.data.docs;
+    for(const i of this.travelData){
           this.object1.push(i);
           console.log(this.object1);
          }
