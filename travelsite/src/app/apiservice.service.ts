@@ -29,6 +29,10 @@ loginform:any;
   viewHotel(){
     return this.http.get('http://localhost:8000/hotelstatus')
   }
+  flightAdd(formvalue:any){
+    return this.http.post('http://localhost:8000/flightdata',formvalue)
+
+  }
   adminLoginDb(){
     return this.http.get('http://localhost:8000/adminlogin')}
   packageOffer(){
@@ -55,6 +59,10 @@ loginform:any;
      }
   bookFlight(formvalue:any){
     return this.http.post('http://localhost:8000/postflightbooking',formvalue)
+  }
+  flightDetails(){
+
+    return this.http.get('http://localhost:8000/flightget')
   }
  
   

@@ -28,6 +28,10 @@ show:boolean=true;
     this.router.navigate([`${place}`])
     this.showOff();
   }
+  goToPageAddFlight(place:string){
+    this.router.navigate([`${place}`])
+
+  }
   showOff(){
     this.show=!this.show
     

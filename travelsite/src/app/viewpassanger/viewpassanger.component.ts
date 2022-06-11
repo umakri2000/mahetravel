@@ -9,8 +9,8 @@ import { ApiserviceService } from '../apiservice.service';
 })
 export class ViewpassangerComponent implements OnInit {
   search!:string;
-  alldata:any;
-  traveldata:any;
+  // alldata:any;
+  travelData:any;
   object:any=[]
   constructor(private formbuilder:FormBuilder,private api:ApiserviceService) { }
   ngOnInit(): void {
@@ -20,10 +20,10 @@ export class ViewpassangerComponent implements OnInit {
   // to view the passanger list
   passangerList() {
     this.api.displayDetails().subscribe(data=>{
-      this.traveldata=data;
-      this.traveldata=this.traveldata.data.docs;
+      this.travelData=data;
+      this.travelData=this.travelData.data.docs;
     
-      for(const i of this.traveldata){
+      for(const i of this.travelData){
             console.log(i);
             this.object.push(i);
         }

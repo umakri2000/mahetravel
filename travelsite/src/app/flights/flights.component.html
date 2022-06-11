@@ -1,100 +1,21 @@
-<div class="why-us">
-  <h3>HOLIDAY-<span class="visit">visit</span></h3>
-  <p>
-    Book Domestic and International Holidays Yatra is one of India's leading
-    online travel portals, offering holiday packages in India and abroad. Yatra
-    offers value for money packages, luxury packages, group departures as well
-    as customized packages. Yatra was one of the first aggregators of holiday
-    packages and since 2015 it has provided a forum for agents and holiday
-    package sellers to sell their packages directly on the Yatra website. This
-    has enabled Yatra to give a wide range of holiday packages including niche
-    and exotic packages to its customers, while providing localised services.
-  </p>
-</div>
-<a routerLink="book-flight">
-  <div class="column">
-    <div class="card">
-      <em class="fa fa-plane" aria-hidden="true"></em>
-      <h3>Flight-7680E</h3>
-      <p>DUBAI</p>
-      <h6>to</h6>
-      <p>INDIA</p>
-      <small>@ 22.30 p.m</small>
-    </div>
-  </div>
+<table class="table bg-dark" aria-label="flighttable" style="padding: 10px">
+  <thead class="text-light">
+    <tr>
+      <th scope="col">FLIGHT</th>
+      <th scope="col">Seat</th>
+      <th scope="col">from</th>
+      <th scope="col">To</th>
+      <th scope="col">BOOK</th>
 
-  <div class="column">
-    <div class="card">
-      <em class="fa fa-plane" aria-hidden="true"></em>
-      <h3>Flight-3001M</h3>
-      <p>GOA</p>
-      <h6>to</h6>
-      <p>AUSTRALIA</p>
-      <small>@ 3.30a.m</small>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <em class="fa fa-plane" aria-hidden="true"></em>
-      <h3>Flight-09876P</h3>
-      <p>MUMBAI</p>
-      <h6>to</h6>
-      <p>ABU-DHABI</p>
-      <small>@ 5.30a.m</small>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <i class="fa fa-plane" aria-hidden="true"></i>
-      <h3>Flight-zM</h3>
-      <p>SINGAPORE</p>
-      <h6>to</h6>
-      <p>CHENNAI</p>
-      <small>@ 15.45 pm</small>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <em class="fa fa-plane" aria-hidden="true"></em>
-      <h3>Flight-79044MA</h3>
-      <p>SRI-LANKA</p>
-      <h6>to</h6>
-      <p>LONDON</p>
-      <small>@ 19.20a.m</small>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <em class="fa fa-plane" aria-hidden="true"></em>
-      <h3>Flight-6654U</h3>
-      <p>PARIS</p>
-      <h6>to</h6>
-      <p>KOLKATA</p>
-      <small>@ 7.30a.m</small>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <i class="fa fa-plane" aria-hidden="true"></i>
-      <h3>Flight-1690W</h3>
-      <p>QATAR</p>
-      <h6>to</h6>
-      <p>SYDNEY</p>
-      <small>@ 9.30a.m</small>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <em class="fa fa-plane" aria-hidden="true"></em>
-      <h3>Flight-1457W</h3>
-      <p>CHENNAI</p>
-      <h6>to</h6>
-      <p>POLAND</p>
-      <small>@ 13.30 p.m</small>
-    </div>
-  </div>
-
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
-</a>
+    </tr>
+  </thead>
+  <tbody class="text-light" >
+    <tr *ngFor="let obj of object1" >
+      <td>{{ obj.flightName}}</td>
+      <td>{{ obj.seat }}</td>
+      <td>{{ obj.from }}</td>
+      <td>{{ obj.to }}</td>
+      <td><button class="btn-btn btn-primary" routerLink="/flights/book-flight">BOOK</button></td>
+    </tr>
+  </tbody>
+</table>

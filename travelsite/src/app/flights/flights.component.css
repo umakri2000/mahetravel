@@ -31,4 +31,8 @@
   .visit{
     color: red
   }
+  tr:nth-child(odd) {
+    background-color: dodgerblue;
+    color:white; 
+}
     

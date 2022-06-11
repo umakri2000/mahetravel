@@ -1,0 +1,62 @@
+
+<div class="card-body">
+    <form [formGroup]="addFlight">
+      <label for="first_Name" class="text-dark">Name :</label>
+      <input
+        type="text"
+        formControlName="flightName"
+        class="form-control"
+        placeholder="Enter flight Name"
+        maxlength="15"
+      />
+      <span
+        class="text-danger"
+        *ngIf="
+          addFlight.controls['flightName'].touched &&
+          addFlight.hasError('required', 'firstName')
+        "
+        >*flight name is required
+      </span>
+      
+      <div class="form-group">
+        <label for="seat" class="text-dark" > Type Of seat :</label>
+        <br>
+            <select name="food" formControlName="seat" id="inputplace" >
+             id="inputplace">
+                <option value="BUSSINESS-CLASS">BUSSINESS CLASS</option>
+                <option value="ECONOMICAL">ECONOMICAL</option>
+              </select>
+        
+    </div>
+    <div class="form-group">
+        <label for="seat" class="text-dark" > from :</label>
+        <br>
+            <select name="from" formControlName="fromplace" id="inputplace" >
+             id="inputplace">
+                <option value="Dubai">Dubai</option>
+                <option value="Malaysia">Malaysia</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Delhi">DELHI</option>
+                <option value="New York">New-York</option>
+                <option value="Paris">Paris</option>
+              </select>
+
+    </div>
+    <div class="form-group">
+        <label for="seat" class="text-dark" > To :</label>
+        <br>
+            <select name="to" formControlName="toplace" id="inputplace" >
+             id="inputplace">
+                <option value="Dubai">Dubai</option>
+                <option value="Malaysia">Malaysia</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Delhi">DELHI</option>
+                <option value="New York">New-York</option>
+                <option value="Paris">Paris</option>
+              </select>
+
+    </div>
+    <button type="submit" class="btn btn-outline-dark px-4 py-2" (click)="flight(this.addFlight.value)">BOOK</button>
+
+    </form>
+    </div>

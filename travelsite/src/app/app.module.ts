@@ -27,6 +27,8 @@ import { InfoComponent } from './info/info.component';
 import { TicketComponent } from './ticket/ticket.component';
 import { StatusComponent } from './status/status.component';
 import { SignupComponent } from './signup/signup.component';
+import { PackagecardComponent } from './packagecard/packagecard.component';
+import { FlightaddComponent } from './flightadd/flightadd.component';
 
 
 @NgModule({
@@ -53,7 +55,9 @@ import { SignupComponent } from './signup/signup.component';
     InfoComponent,
     TicketComponent,
     StatusComponent,
-    SignupComponent
+    SignupComponent,
+    PackagecardComponent,
+    FlightaddComponent
   ],
   imports: [
     BrowserModule,FormsModule,

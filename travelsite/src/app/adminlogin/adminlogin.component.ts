@@ -26,12 +26,13 @@ adminData:any;
       this.adminLoginDb()
   }
 adminLogin(formvalue:any){
+  console.log('hi')
 for (const iterator of this.object) {
   
   if(iterator.username == formvalue.username && iterator.password==formvalue.password){
   {
     this.router.navigate(['/admindashboard']);
-    alert('valid mailid ') 
+   
   }
     }
   }}
@@ -43,6 +44,7 @@ for (const iterator of this.object) {
       this.adminData=this.adminData.data.docs;
       for(const i of this.adminData){
             this.object.push(i);
+            console.log(this.object)
       }
     })
   }

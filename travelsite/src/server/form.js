@@ -172,8 +172,6 @@ app.post("/travel", (request, response) => {
     });
   });
   app.get("/viewpackage", (request, response) => {
-    console.log(request);
-    console.log('admin get data')
   const data={
     selector:{
       type:'package'
@@ -239,7 +237,7 @@ dbconnection.post_travel(object,'projecttravel').then(_res=>{
     dbconnection.get(data,"projecttravel").then((_res) => {
       const teststatus={
         status:200,
-        message: "TRAVELLER was registered Successfully into the database",
+        message: "admin id  was geted uccessfully Successfully into the database",
         data: _res,
       }
       const err ={
@@ -306,6 +304,63 @@ dbconnection.get(data,"projecttravel").then((res) => {
   }
 });
 });
+app.post("/flightdata", (request, response) => {
+ 
+  const object = {
+    
+    flightName:request.body.flightName,
+    seat:request.body.seat,
+    from: request.body.fromplace,
+    to:request.body.toplace,
+    type:'flightstart'
+  };
+  console.log(object);
+  
+    dbconnection.post_travel(object,'projecttravel').then(_res => {
+      const teststatus={
+        status:201,
+        message: "TRAVELLER was registered Successfully into the database",
+        data:_res,
+      }
+      const err ={
+        status:404,
+        message:'OOPS',
+        data:_res,
+      }
+      if (_res) {
+        response.send(teststatus);
+      } else {
+        response.send(err);
+      }
+            
+      })
+    })
+    app.get("/flightget", (_request, response) => {
+    
+      console.log('flight start')
+      const data = {
+        selector:{
+          type:'flightstart'
+        }
+      }
+      dbconnection.get(data,"projecttravel").then((_res) => {
+        const teststatus={
+          status:200,
+          message: "TRAVELLER was registered Successfully into the database",
+          data: _res,
+        }
+        const err ={
+          status:404,
+          message:'OOPS',
+          data:_res,
+        }
+        if (_res) {
+          response.send(teststatus);
+        } else {
+          response.send(err);
+        }
+      });
+    });
 app.post('/email',(request,_response)=>{
   let object ={
     first_name: request.body.first_name,

@@ -13,6 +13,7 @@ export class BookFlightComponent implements OnInit {
   search!:string;
   object:any=[];
   flightData:any;
+  object1:any=[];
   
   constructor(private formbuilder:FormBuilder,private api:ApiserviceService) { }
 
@@ -24,16 +25,29 @@ export class BookFlightComponent implements OnInit {
       'flight':['',Validators.required],
       'email':['',Validators.required],
       'seat':['',Validators.required],
-       
+        
+      
     })
+    this.flightDetails();
   }
   // post the flight passanger data
   ticketFlight(Formvalue:NgForm){
     this.api.bookFlight(Formvalue).subscribe((_data: any)=>{
       console.log(_data);
     })
-    alert('your flight was booked!!!')
 
+
+  }
+  flightDetails() {
+    console.log('flightdetails')
+    this.api.flightDetails().subscribe(data=>{  
+      this.flightData=data;
+      this.flightData=this.flightData.data.docs;
+      for(const i of this.flightData){
+            this.object1.push(i);
+            console.log(this.object1)
+           }
+      })
   }
   // view the passanger data
   viewFlightstatus(_Formvalue:any) {

@@ -1,0 +1,21 @@
+<div class="head-content">
+  <span class="form-outline">
+    <input
+      type="search"
+      [(ngModel)]="search"
+      class="form-control mt-5 search"
+      placeholder="search trips"
+  /></span>
+  <span
+  ><em class="fa fa-search" aria-hidden="true" (click)="viewPackage()"></em
+></span>
+</div>
+ <div class="column" *ngFor="let obj of object">
+    <div class="card">
+        
+    <h1 class="packlist">{{ obj.place }}</h1>
+    <h1 class="packlist"> Rs:{{ obj.price }}/</h1>
+    <h6><button type="submit" class="btn btn-primary" routerLink="register">BOOK</button></h6>
+     
+    </div>
+  </div>
