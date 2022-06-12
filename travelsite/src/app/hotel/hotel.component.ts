@@ -37,7 +37,7 @@ export class HotelComponent implements OnInit {
     this.api.bookHotel(Formvalue).subscribe((data)=>{
       console.log(data);
     })
-    alert('your room was booked!!!')
+    
   }
   hotelList() {
     

@@ -43,7 +43,7 @@ export class TourgoaComponent implements OnInit {
         }
     this.api.bookData(Formvalue).subscribe((data: any)=>{
       console.log(data);
-      alert('Your Ticket was booked!!!!!!!!!')
+     
     })
     
   }

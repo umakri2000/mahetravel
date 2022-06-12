@@ -171,7 +171,7 @@ app.post("/travel", (request, response) => {
       }
     });
   });
-  app.get("/viewpackage", (request, response) => {
+  app.get("/viewpackage", (_request, response) => {
   const data={
     selector:{
       type:'package'
@@ -361,20 +361,6 @@ app.post("/flightdata", (request, response) => {
         }
       });
     });
-app.post('/email',(request,_response)=>{
-  let object ={
-    first_name: request.body.first_name,
-    mobileNumber:request.body.mobileNumber,
-    email: request.body.email,
-    date:request.body.date,
-    place:request.body.place,
-    aadhar:request.body.aadhar,
-
-    type:'user'
-  }
-  setmail.getemail(request.body.email);
-  console.log(object);
-})
   app.delete("/delete/:id/:id1", (request, response) => {
     dbconnection.del_id(request.params.id,request.params.id1, "projecttravel").then((_res)=>{
       if (_res) {

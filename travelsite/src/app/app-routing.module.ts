@@ -17,7 +17,6 @@ import { ViewhotelComponent } from './viewhotel/viewhotel.component';
 import { HotelComponent } from './hotel/hotel.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { ViewpassangerComponent } from './viewpassanger/viewpassanger.component';
-// import { PackagesComponent } from './packages/packages.component';
 import { StatusComponent } from './status/status.component';
 import { SignupComponent } from './signup/signup.component';
 import { FlightaddComponent } from './flightadd/flightadd.component';
@@ -27,7 +26,6 @@ const routes: Routes = [
 {path:'login',component:LoginComponent},
 {path:'info',component:InfoComponent},
 {path:'hotel',component:HotelComponent},
-// {path:'packages',component:PackagesComponent},
 {path:'packagecard',component:PackagecardComponent},
 {path:'admindashboard',component:AdmindashboardComponent},
 {path:'adminlogin',component:AdminloginComponent},
@@ -46,7 +44,6 @@ const routes: Routes = [
 {path:'flights',component:FlightsComponent},
 {path:'flights/book-flight',component:BookFlightComponent},
 {path:'',redirectTo:'home', pathMatch: 'full' },
-
 ]
 
 @NgModule({

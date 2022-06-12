@@ -31,7 +31,7 @@
     display: grid;
     grid-template-columns:1fr 1fr 1fr 1fr;
     padding: 10px;
-     grid-gap:25px;
+     grid-gap:100px;
 height: 64vh; 
 
  box-sizing: border-box; 
@@ -58,7 +58,7 @@ height: 64vh;
 
 .grid-image h4{
     position: absolute;
-    top:1086px;
+    top:1286px;
     padding:150px;
     color:white;
     

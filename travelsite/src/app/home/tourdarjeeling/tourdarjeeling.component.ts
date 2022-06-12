@@ -42,7 +42,7 @@ traveldate:any;
         // to post the data
     this.api.bookData(Formvalue).subscribe((data: any)=>{
       console.log(data);
-      alert('Your Ticket was booked!!!!!!!!!')
+     
     })
   }
   // function for disable past date
