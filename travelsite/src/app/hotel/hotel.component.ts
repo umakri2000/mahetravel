@@ -24,7 +24,6 @@ export class HotelComponent implements OnInit {
       'hotel':['',Validators.required],
       'email':['',Validators.required],
       'Room':['',Validators.required],
-        'file':['',Validators.required],
         'food':['',Validators.required],
     })
     this.futureDate();

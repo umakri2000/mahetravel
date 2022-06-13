@@ -113,23 +113,6 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="file" class="text-dark">IDENTITY file :</label>
-          <input
-            type="file"
-            formControlName="file"
-            class="form-control"
-            placeholder="Put a file"
-          />
-          <span
-            class="text-danger"
-            *ngIf="
-              resortbook.controls['file'].dirty &&
-              resortbook.hasError('required', 'file')
-            "
-            >*id proof is required
-          </span>
-        </div>
-        <div class="form-group">
           <label for="food" class="text-dark">ACCOMANDATION OF FOOD :</label>
           <br />
           <select name="food" formControlName="food" id="inputplace">

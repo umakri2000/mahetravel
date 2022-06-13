@@ -197,10 +197,8 @@
       </div>
       <div class="travel-booking">
         <div *ngIf="show">
-          <table class="table bg-light">
-            <caption>
-              booking
-            </caption>
+          <table class="table bg-light" aria-label="travell-booking">
+      
             <thead class="text-dark">
               <tr>
                 <th scope="col">Name</th>
@@ -214,7 +212,7 @@
             </thead>
             <tbody class="text-darkt">
               <tr *ngFor="let obj of object1 | filter: search">
-                <td>{{ obj.first_name }}</td>
+                <td>{{ obj.firstName }}</td>
                 <td>{{ obj.email }}</td>
                 <td>{{ obj.place }}</td>
                 <td>{{ obj.date }}</td>

@@ -7,10 +7,10 @@ const nanodb = nano(nano_url);
 let post_travel = function (value, dbname) {
       return nanodb.use(dbname).insert(value);
     }
-  let get = function (val, dbname) {
+let get = function (val, dbname) {
         return nanodb.use(dbname).find(val);
      } 
-     let del_id = function (id, id1, dbname) {
+let del_id = function (id, id1, dbname) {
       return  nanodb.use(dbname).destroy(id, id1);
 }; 
 

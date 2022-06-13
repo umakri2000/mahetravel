@@ -40,14 +40,13 @@ app.post("/travel", (request, response) => {
       } else {
         response.send(err);
       }
-            
       })
     });
+
     app.post("/signup", (request, response) => {
       console.log(request);
       const object = {
-        
-        firstNname:request.body.firstNname,
+        firstName:request.body.firstName,
         email: request.body.email,
         password:request.body.password,
         type:'signup',
@@ -71,9 +70,9 @@ app.post("/travel", (request, response) => {
                 
           })
         });
+
     app.get("/displayDetails", (request, response) => {
         console.log(request);
-        console.log("begin to write data");
         const data = {
           selector:{
             type:'user'
@@ -92,7 +91,8 @@ app.post("/travel", (request, response) => {
           }
         });
       }); 
-      app.get("/getsignup", (request, response) => {
+
+app.get("/getsignup", (request, response) => {
         console.log(request);
         const data = {
           selector:{
@@ -135,7 +135,7 @@ app.post("/travel", (request, response) => {
             const err ={
               status:404,
               message:'OOPS',
-              data:res,
+              data:_res,
             }
             if (_res) {
               response.send(teststatus);
