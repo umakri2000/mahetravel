@@ -22,8 +22,6 @@ aadhar:any;
     this.name=parsed.firstName;
     console.log(this.name);
   }
-
-
 // to display the status of the passangers
 displayDetails() {
   console.log('hii this is info display')

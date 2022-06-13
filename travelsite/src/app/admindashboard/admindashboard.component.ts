@@ -1,19 +1,16 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-admindashboard',
   templateUrl: './admindashboard.component.html',
   styleUrls: ['./admindashboard.component.css']
 })
-export class AdmindashboardComponent implements OnInit {
+export class AdmindashboardComponent {
 show:boolean=true;
   constructor(private router:Router) { }
 
-  ngOnInit(): void {
-    // to covercome sonar lint code smell
-    
-  }
+ 
   goToPageAddPackage(place:string){
     this.router.navigate([`${place}`])
     this.showOff();

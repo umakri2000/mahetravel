@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ApiserviceService } from '../apiservice.service';
 
 @Component({
@@ -6,17 +6,14 @@ import { ApiserviceService } from '../apiservice.service';
   templateUrl: './ticket.component.html',
   styleUrls: ['./ticket.component.css']
 })
-export class TicketComponent implements OnInit {
+export class TicketComponent  {
 packagedata:any;
 object:any=[];
 search!:string;
 
   constructor(private api :ApiserviceService) { }
 
-  ngOnInit(): void {
-    // to covercome sonar lint code smell
-
-  }
+  
   viewPackage(){
     this.api.packageOffer().subscribe(data=>{
       console.log(data);

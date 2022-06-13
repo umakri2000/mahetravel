@@ -47,9 +47,7 @@ loginform:any;
   }
   showOff(){
     this.loginshow=!this.loginshow;
-  
     this.show=!this.show;
-    console.log(this.show)
   }
   deleteHotel(id:any,id1:any){
     return this.http.delete(`http://localhost:8000/deletehotel/${id}/${id1}`)

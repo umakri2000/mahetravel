@@ -16,7 +16,6 @@ export class HotelComponent implements OnInit {
   maxDate:any;
   data:any;
   constructor(private formbuilder:FormBuilder,private api:ApiserviceService ) {}
-
   ngOnInit(): void {
     this.resortbook = this.formbuilder.group({
       'name':['',Validators.required],
@@ -27,8 +26,6 @@ export class HotelComponent implements OnInit {
       'Room':['',Validators.required],
         'file':['',Validators.required],
         'food':['',Validators.required],
-
-
     })
     this.futureDate();
   }

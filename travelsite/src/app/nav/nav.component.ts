@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiserviceService } from '../apiservice.service';
 
@@ -7,15 +7,12 @@ import { ApiserviceService } from '../apiservice.service';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css']
 })
-export class NavComponent implements OnInit {
+export class NavComponent  {
   show:boolean=false;
   loginshow:boolean=true;
   constructor(public api :ApiserviceService,private router:Router) { }
 name:any
-  ngOnInit(): void {
-    // to covercome sonar lint code smell
-   
-  }
+ 
 
 // function for logout
 logOut(){
