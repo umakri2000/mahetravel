@@ -361,6 +361,59 @@ app.post("/flightdata", (request, response) => {
         }
       });
     });
+    app.post("/feedback", (request, response) => {
+      console.log(request);
+      const object = {
+        firstName: request.body.firstName,
+        mobileNumber:request.body.mobileNumber,
+        email: request.body.email,
+        place:request.body.place,
+        feedback:request.body.feedback,
+        rating:request.body.rating,
+        type:'feedback',
+      };
+        dbconnection.post_travel(object,'projecttravel').then((res)=>{
+          const teststatus={
+            status:201,
+            message: "feedback data was registered Successfully into the database",
+            data: res,
+          }
+          const err ={
+            status:404,
+            message:'OOPS',
+            data:res,
+          }
+          if (res) {
+            response.send(teststatus);
+          } else {
+            response.send(err);
+          }
+          })
+        });
+        app.get("/getrating", (_request, response) => {
+          const data = {
+            selector:{
+              type:'feedback'
+            }
+          }
+          dbconnection.get(data,"projecttravel").then((_res) => {
+            const teststatus={
+              status:200,
+              message: "feedback was registered Successfully into the database",
+              data: _res,
+            }
+            const err ={
+              status:404,
+              message:'OOPS',
+              data:_res,
+            }
+            if (_res) {
+              response.send(teststatus);
+            } else {
+              response.send(err);
+            }
+          });
+        });
   app.delete("/delete/:id/:id1", (request, response) => {
     dbconnection.del_id(request.params.id,request.params.id1, "projecttravel").then((_res)=>{
       if (_res) {

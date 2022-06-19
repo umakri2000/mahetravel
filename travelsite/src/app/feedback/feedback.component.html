@@ -1,0 +1,148 @@
+
+<div class="container mt-5">
+    <div class="card mx-auto">
+      <div class="card-header text-center">
+        <h1 class="text-dark">BOOK-UP</h1>
+      </div>
+
+      <div class="card-body">
+        <form [formGroup]="feedback">
+          <label for="first_Name" class="text-dark">Name :</label>
+          <input
+            type="text"
+            formControlName="firstName"
+            class="form-control"
+            placeholder="Enter First Name"
+            maxlength="15"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              feedback.controls['firstName'].touched &&
+              feedback.hasError('required', 'firstName')
+            "
+            >*Name is required
+          </span>
+          <div class="form-group">
+            <label for="email" class="text-dark">Email :</label>
+            <input
+              type="email"
+              formControlName="email"
+              class="form-control"
+              placeholder="Enter Your Email "
+              pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+            />
+            <span
+              class="text-danger"
+              *ngIf="
+                feedback.controls['email'].touched &&
+                feedback.hasError('required', 'email')
+              "
+              >*Email is required
+            </span>
+            <span
+              class="text-danger"
+              *ngIf="
+                feedback.controls['email'].touched &&
+                feedback.hasError('pattern', 'email')
+              "
+              >*Not Valid Email
+            </span>
+          </div>
+            
+          <div class="form-group">
+            <label for="mobileNumber" class="text-dark">MobileNumber:</label>
+            <input
+              type="text"
+              formControlName="mobileNumber"
+              class="form-control"
+              placeholder="Enter mobile number"
+              pattern="^[+0]{0,2}(91)?[0-9]{10}$"
+              minlength="10"
+              maxlength="10"
+            />
+            <span
+              class="text-danger"
+              *ngIf="
+                feedback.controls['mobileNumber'].touched &&
+                feedback.hasError('required', 'mobileNumber')
+              "
+              >*mobile Number is required
+            </span>
+            <span
+              class="text-danger"
+              *ngIf="feedback.hasError('pattern', 'mobileNumber')"
+              >*Contact number should not contains chars!!
+            </span>
+          </div>
+          <div class="form-group">
+              <label for="place" class="text-dark">PLACE :</label>
+              <input
+                type="text"
+                formControlName="place"
+                class="form-control"
+                placeholder="Enter the place name"
+                maxlength="15"
+              />
+              <span
+                class="text-danger"
+                *ngIf="
+                  feedback.controls['place'].touched &&
+                  feedback.hasError('required', 'place')
+                "
+                >*place is required
+              </span>
+            </div>
+            <div class="form-group">
+                <label for="feedback" class="text-dark">FEEDBACK :</label>
+                <input
+                  type="textarea"
+                  formControlName="feedback"
+                  class="form-control"
+                  placeholder="Enter the feedback"
+                  maxlength="15"
+                />
+                <span
+                  class="text-danger"
+                  *ngIf="
+                    feedback.controls['feedback'].touched &&
+                    feedback.hasError('required', 'feedback')
+                  "
+                  >*feedback is required
+                </span>
+              </div>
+              <div class="form-group">
+                <label for="rating" class="text-dark">RATINGS :</label>
+                <input
+                  type="number"
+                  formControlName="rating"
+                  class="form-control"
+                  placeholder="please rate"
+                  max="5"
+                  min="1"
+                />
+                <span
+                  class="text-danger"
+                  *ngIf="
+                    feedback.controls['rating'].touched &&
+                    feedback.hasError('required', 'rating')
+                  "
+                  >*rating is required
+                </span>
+              </div>
+            
+            <div class="button text-center">
+            <button
+              type="submit"
+              class="btn btn-success"
+              [disabled]="!feedback.valid"
+              (click)="sendFeedback(this.feedback.value)"
+            >
+             BOOK
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  
+  

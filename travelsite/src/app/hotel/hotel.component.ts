@@ -29,7 +29,6 @@ export class HotelComponent implements OnInit {
     this.futureDate();
   }
   bookHotel(Formvalue:NgForm){
-    console.log(Formvalue);
     this.api.bookHotel(Formvalue).subscribe((data)=>{
       console.log(data);
     })
@@ -38,15 +37,12 @@ export class HotelComponent implements OnInit {
   hotelList() {
     
     this.api.viewHotel().subscribe(data=>{
-      console.log(data);
-      console.log('Data was fetching');
+      
       this.hotelData=data;
       this.hotelData=this.hotelData.data.docs;
       console.log(this.hotelData);
       for(const i of this.hotelData){
-            console.log(i);
             this.object.push(i);
-            console.log('details of the hotel data was successfully geted'); 
       }
     
     })

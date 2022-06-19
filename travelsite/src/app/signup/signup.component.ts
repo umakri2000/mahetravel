@@ -18,8 +18,6 @@ signupForm!:FormGroup;
          'password':['',Validators.required]
       }
     )
-   
-   
   }
   login(formvalue:any){
     this.api.signup(formvalue).subscribe((data: any)=>{

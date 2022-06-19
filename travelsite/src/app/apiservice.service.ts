@@ -62,6 +62,10 @@ loginform:any;
 
     return this.http.get('http://localhost:8000/flightget')
   }
- 
-  
+ feedback(formvalue:any){
+    return this.http.post('http://localhost:8000/feedback',formvalue)
+ }
+ getfeedback(){
+    return this.http.get('http://localhost:8000/getrating')
+  }
 }

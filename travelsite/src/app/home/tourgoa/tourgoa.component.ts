@@ -12,10 +12,18 @@ export class TourgoaComponent implements OnInit {
   traveldata:any;
   maxdate:any;
   value:boolean=true;
+  data:any;
+  object1:any=[];
+  
+  sum:any=0;
+  rating:number=3
+  count:any=0;
   constructor(private api:ApiserviceService,private formbuilder:FormBuilder) { }
 
   ngOnInit(): void {
+  
     this.futuredate();
+    
     this.bookup = this.formbuilder.group(
       {
         
@@ -61,8 +69,13 @@ export class TourgoaComponent implements OnInit {
     }
     this.traveldata = presentyear + "-" + presentmonth + "-" + presentdate;
     console.log(this.traveldata);
-    
   }
+  
+ cummulative(){
+  this.sum = this.rating+this.sum;
+  console.log(this.sum/23)
+  
+ }
   }
 
 

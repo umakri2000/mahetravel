@@ -7,7 +7,7 @@
       placeholder="Enter Your Data"
     />
     <button type="submit" class="btn btn-primary" (click)="passangerList()">
-      VIEWpackage
+      viewpassanger
     </button>
     <table class="table bg-light" aria-label="passanger-table">
       <thead class="text-dark">
@@ -23,7 +23,7 @@
       </thead>
       <tbody class="text-dark">
         <tr *ngFor="let obj of object | filter: search">
-          <td>{{ obj.first_name }}</td>
+          <td>{{ obj.firstName }}</td>
           <td>{{ obj.place }}</td>
           <td>{{ obj.email }}</td>
           <td>{{ obj.date }}</td>

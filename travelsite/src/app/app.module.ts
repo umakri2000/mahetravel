@@ -29,6 +29,8 @@ import { StatusComponent } from './status/status.component';
 import { SignupComponent } from './signup/signup.component';
 import { PackagecardComponent } from './packagecard/packagecard.component';
 import { FlightaddComponent } from './flightadd/flightadd.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -57,12 +59,13 @@ import { FlightaddComponent } from './flightadd/flightadd.component';
     StatusComponent,
     SignupComponent,
     PackagecardComponent,
-    FlightaddComponent
+    FlightaddComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,FormsModule,
     AppRoutingModule,ReactiveFormsModule,
-    HttpClientModule,Ng2SearchPipeModule,FormsModule
+    HttpClientModule,Ng2SearchPipeModule,FormsModule, NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
