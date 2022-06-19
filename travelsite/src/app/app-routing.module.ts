@@ -22,11 +22,14 @@ import { PackagesComponent } from './packages/packages.component';
 import { SignupComponent } from './signup/signup.component';
 import { FlightaddComponent } from './flightadd/flightadd.component';
 import { PackagecardComponent } from './packagecard/packagecard.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 const routes: Routes = [
 {path:'register',component:RegisterComponent},
 {path:'login',component:LoginComponent},
 {path:'info',component:InfoComponent},
 {path:'packages',component:PackagesComponent},
+{path:'feedback',component:FeedbackComponent},
+
 {path:'hotel',component:HotelComponent},
 {path:'packagecard',component:PackagecardComponent},
 {path:'admindashboard',component:AdmindashboardComponent},

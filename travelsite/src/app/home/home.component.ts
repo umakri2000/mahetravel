@@ -95,6 +95,19 @@ feedbackrating(){
 
             }
           }
+          if(i.place=='darjeeling'){
+            
+            for( const x of this.feedbackData){
+              this.count++
+              console.log(this.feedbackData)
+              console.log(i.rating);
+              i.rating=i.rating+i.rating;
+              this.ans=i.rating/this.count;
+              this.result=this.ans+this.final;
+              console.log(this.result);
+
+            }
+          }
             
             
           }
@@ -107,4 +120,3 @@ feedbackrating(){
 }
 
 }
-
